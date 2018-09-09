@@ -12,6 +12,7 @@ pod 'YYWebImage'
 pod 'MJRefresh'
 pod 'AFNetworking'
 pod 'MBProgressHUD'
+pod 'JSExtension'
 
   target 'MajorForumTests' do
     inherit! :search_paths

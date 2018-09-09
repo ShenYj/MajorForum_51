@@ -8,18 +8,40 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    if (IS_IPAD) {
+        return UIInterfaceOrientationMaskAll;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:SCREEN_BOUNDS];
+    if (IS_IPHONE) {
+        JSPhoneTabBarController *tabBarController = [[JSPhoneTabBarController alloc] init];
+        self.window.rootViewController = tabBarController;
+    } else {
+        JSSplitController *splitViewController = [[JSSplitController alloc] init];
+        self.window.rootViewController = splitViewController;
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    }
+    [self setUpWindowRootViewController];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
+- (void)setUpWindowRootViewController {
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

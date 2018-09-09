@@ -17,6 +17,12 @@
 		F7CEC1312144C55300BAC9E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CEC12A2144C55300BAC9E2 /* Assets.xcassets */; };
 		F7CEC1342144C55300BAC9E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC12F2144C55300BAC9E2 /* main.m */; };
 		F7CEC1352144C55300BAC9E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC1302144C55300BAC9E2 /* AppDelegate.m */; };
+		F7CEC15C214538B300BAC9E2 /* JSMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC13F214538B300BAC9E2 /* JSMasterViewController.m */; };
+		F7CEC15D214538B300BAC9E2 /* JSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC142214538B300BAC9E2 /* JSDetailViewController.m */; };
+		F7CEC15E214538B300BAC9E2 /* JSSplitController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC143214538B300BAC9E2 /* JSSplitController.m */; };
+		F7CEC161214538B300BAC9E2 /* JSBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC147214538B300BAC9E2 /* JSBaseNavigationController.m */; };
+		F7CEC167214538B300BAC9E2 /* JSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC158214538B300BAC9E2 /* JSBaseViewController.m */; };
+		F7CEC1702145492100BAC9E2 /* JSPhoneTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC16F2145492100BAC9E2 /* JSPhoneTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,18 @@
 		F7CEC12F2144C55300BAC9E2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7CEC1302144C55300BAC9E2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F7CEC13A2144C60E00BAC9E2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F7CEC13E214538B300BAC9E2 /* JSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDetailViewController.h; sourceTree = "<group>"; };
+		F7CEC13F214538B300BAC9E2 /* JSMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMasterViewController.m; sourceTree = "<group>"; };
+		F7CEC140214538B300BAC9E2 /* JSSplitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSplitController.h; sourceTree = "<group>"; };
+		F7CEC141214538B300BAC9E2 /* JSMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMasterViewController.h; sourceTree = "<group>"; };
+		F7CEC142214538B300BAC9E2 /* JSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDetailViewController.m; sourceTree = "<group>"; };
+		F7CEC143214538B300BAC9E2 /* JSSplitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSplitController.m; sourceTree = "<group>"; };
+		F7CEC147214538B300BAC9E2 /* JSBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseNavigationController.m; sourceTree = "<group>"; };
+		F7CEC151214538B300BAC9E2 /* JSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseViewController.h; sourceTree = "<group>"; };
+		F7CEC157214538B300BAC9E2 /* JSBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseNavigationController.h; sourceTree = "<group>"; };
+		F7CEC158214538B300BAC9E2 /* JSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseViewController.m; sourceTree = "<group>"; };
+		F7CEC16E2145492100BAC9E2 /* JSPhoneTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSPhoneTabBarController.h; sourceTree = "<group>"; };
+		F7CEC16F2145492100BAC9E2 /* JSPhoneTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSPhoneTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				F7CEC1362144C56100BAC9E2 /* 主框架 */,
+				F7CEC16A2145465600BAC9E2 /* Controllers */,
+				F7CEC16D2145468400BAC9E2 /* Views */,
+				F7CEC16C2145467E00BAC9E2 /* Models */,
 				F7CEC1282144C55300BAC9E2 /* SupportingFiles */,
 			);
 			path = MajorForum;
@@ -181,18 +202,11 @@
 		F7CEC1362144C56100BAC9E2 /* 主框架 */ = {
 			isa = PBXGroup;
 			children = (
-				F7CEC1372144C56100BAC9E2 /* Classes */,
+				F7CEC13B214538B300BAC9E2 /* Controllers */,
 				F7CEC1382144C56100BAC9E2 /* Models */,
 				F7CEC1392144C56100BAC9E2 /* Views */,
 			);
 			path = "主框架";
-			sourceTree = "<group>";
-		};
-		F7CEC1372144C56100BAC9E2 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		F7CEC1382144C56100BAC9E2 /* Models */ = {
@@ -203,6 +217,70 @@
 			sourceTree = "<group>";
 		};
 		F7CEC1392144C56100BAC9E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7CEC13B214538B300BAC9E2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7CEC13C214538B300BAC9E2 /* Main_universal */,
+				F7CEC13D214538B300BAC9E2 /* Main_iPad */,
+				F7CEC144214538B300BAC9E2 /* Main_iPhone */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F7CEC13C214538B300BAC9E2 /* Main_universal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main_universal;
+			sourceTree = "<group>";
+		};
+		F7CEC13D214538B300BAC9E2 /* Main_iPad */ = {
+			isa = PBXGroup;
+			children = (
+				F7CEC140214538B300BAC9E2 /* JSSplitController.h */,
+				F7CEC143214538B300BAC9E2 /* JSSplitController.m */,
+				F7CEC13E214538B300BAC9E2 /* JSDetailViewController.h */,
+				F7CEC142214538B300BAC9E2 /* JSDetailViewController.m */,
+				F7CEC141214538B300BAC9E2 /* JSMasterViewController.h */,
+				F7CEC13F214538B300BAC9E2 /* JSMasterViewController.m */,
+			);
+			path = Main_iPad;
+			sourceTree = "<group>";
+		};
+		F7CEC144214538B300BAC9E2 /* Main_iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				F7CEC151214538B300BAC9E2 /* JSBaseViewController.h */,
+				F7CEC158214538B300BAC9E2 /* JSBaseViewController.m */,
+				F7CEC157214538B300BAC9E2 /* JSBaseNavigationController.h */,
+				F7CEC147214538B300BAC9E2 /* JSBaseNavigationController.m */,
+				F7CEC16E2145492100BAC9E2 /* JSPhoneTabBarController.h */,
+				F7CEC16F2145492100BAC9E2 /* JSPhoneTabBarController.m */,
+			);
+			path = Main_iPhone;
+			sourceTree = "<group>";
+		};
+		F7CEC16A2145465600BAC9E2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F7CEC16C2145467E00BAC9E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F7CEC16D2145468400BAC9E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -499,6 +577,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7CEC1352144C55300BAC9E2 /* AppDelegate.m in Sources */,
+				F7CEC15C214538B300BAC9E2 /* JSMasterViewController.m in Sources */,
+				F7CEC167214538B300BAC9E2 /* JSBaseViewController.m in Sources */,
+				F7CEC1702145492100BAC9E2 /* JSPhoneTabBarController.m in Sources */,
+				F7CEC161214538B300BAC9E2 /* JSBaseNavigationController.m in Sources */,
+				F7CEC15E214538B300BAC9E2 /* JSSplitController.m in Sources */,
+				F7CEC15D214538B300BAC9E2 /* JSDetailViewController.m in Sources */,
 				F7CEC1342144C55300BAC9E2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,6 +757,7 @@
 				DEVELOPMENT_TEAM = KS5QTFAS57;
 				GCC_PREFIX_HEADER = "$SRCROOT/$(PRODUCT_NAME)/SupportingFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = MajorForum/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -692,6 +777,7 @@
 				DEVELOPMENT_TEAM = KS5QTFAS57;
 				GCC_PREFIX_HEADER = "$SRCROOT/$(PRODUCT_NAME)/SupportingFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = MajorForum/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
