@@ -6,6 +6,7 @@
 //  Copyright © 2017年 ShenYj. All rights reserved.
 //
 
+#import "JSBaseNavigationController.h"
 #import "JSDetailViewController.h"
 #import "JSMasterItem.h"
 
@@ -51,11 +52,11 @@
     // 使用运行时机制将类名转为类
     Class class = NSClassFromString(className);
     // 导航控制器的根控制器
-    UIViewController *viewController = [[class alloc] init];
+    JSBaseViewController *viewController = [[class alloc] init];
     // 设置导航控制器的根控制器
     [self prepareNavigationRootViewController:viewController];
     // 创建导航控制器
-    self.containerView_NavigationView =[[UINavigationController alloc] initWithRootViewController:viewController];
+    self.containerView_NavigationView = [[JSBaseNavigationController alloc] initWithRootViewController:viewController];
     // 添加子控制器
     [self addChildViewController:_containerView_NavigationView];
     // 添加子视图
@@ -75,9 +76,10 @@
 }
 
 // 设置导航控制器的根控制器视图
-- (void)prepareNavigationRootViewController:(UIViewController *)rooViewController {
+- (void)prepareNavigationRootViewController:(JSBaseViewController *)rooViewController {
     //rooViewController.title = _masterItem.title;等同于下面的设置
-    rooViewController.navigationItem.title = _masterItem.title;
+    rooViewController.js_navigationItem.title = _masterItem.title;
+    rooViewController.view.backgroundColor = [UIColor js_randomColor];
     if (_masterItem.segmentItem) {
         // 设置分段控件
         UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:_masterItem.segmentItem];

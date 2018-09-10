@@ -24,10 +24,11 @@
 		F7CEC15C214538B300BAC9E2 /* JSMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC13F214538B300BAC9E2 /* JSMasterViewController.m */; };
 		F7CEC15D214538B300BAC9E2 /* JSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC142214538B300BAC9E2 /* JSDetailViewController.m */; };
 		F7CEC15E214538B300BAC9E2 /* JSSplitController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC143214538B300BAC9E2 /* JSSplitController.m */; };
-		F7CEC161214538B300BAC9E2 /* JSBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC147214538B300BAC9E2 /* JSBaseNavigationController.m */; };
-		F7CEC167214538B300BAC9E2 /* JSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC158214538B300BAC9E2 /* JSBaseViewController.m */; };
 		F7CEC1702145492100BAC9E2 /* JSPhoneTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC16F2145492100BAC9E2 /* JSPhoneTabBarController.m */; };
 		F7CEC175214694AC00BAC9E2 /* user_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7CEC174214694AC00BAC9E2 /* user_default@3x.png */; };
+		F7CEC1792146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC1782146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m */; };
+		F7CEC17E2146B28700BAC9E2 /* JSBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC17C2146B28700BAC9E2 /* JSBaseNavigationController.m */; };
+		F7CEC17F2146B28700BAC9E2 /* JSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC17D2146B28700BAC9E2 /* JSBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,13 +87,15 @@
 		F7CEC141214538B300BAC9E2 /* JSMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMasterViewController.h; sourceTree = "<group>"; };
 		F7CEC142214538B300BAC9E2 /* JSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDetailViewController.m; sourceTree = "<group>"; };
 		F7CEC143214538B300BAC9E2 /* JSSplitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSplitController.m; sourceTree = "<group>"; };
-		F7CEC147214538B300BAC9E2 /* JSBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseNavigationController.m; sourceTree = "<group>"; };
-		F7CEC151214538B300BAC9E2 /* JSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseViewController.h; sourceTree = "<group>"; };
-		F7CEC157214538B300BAC9E2 /* JSBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseNavigationController.h; sourceTree = "<group>"; };
-		F7CEC158214538B300BAC9E2 /* JSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseViewController.m; sourceTree = "<group>"; };
 		F7CEC16E2145492100BAC9E2 /* JSPhoneTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSPhoneTabBarController.h; sourceTree = "<group>"; };
 		F7CEC16F2145492100BAC9E2 /* JSPhoneTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSPhoneTabBarController.m; sourceTree = "<group>"; };
 		F7CEC174214694AC00BAC9E2 /* user_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_default@3x.png"; sourceTree = "<group>"; };
+		F7CEC1772146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSComprehensiveInformationVC_iPad.h; sourceTree = "<group>"; };
+		F7CEC1782146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSComprehensiveInformationVC_iPad.m; sourceTree = "<group>"; };
+		F7CEC17A2146B28700BAC9E2 /* JSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseViewController.h; sourceTree = "<group>"; };
+		F7CEC17B2146B28700BAC9E2 /* JSBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseNavigationController.h; sourceTree = "<group>"; };
+		F7CEC17C2146B28700BAC9E2 /* JSBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseNavigationController.m; sourceTree = "<group>"; };
+		F7CEC17D2146B28700BAC9E2 /* JSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +261,10 @@
 		F7CEC13C214538B300BAC9E2 /* Main_universal */ = {
 			isa = PBXGroup;
 			children = (
+				F7CEC17B2146B28700BAC9E2 /* JSBaseNavigationController.h */,
+				F7CEC17C2146B28700BAC9E2 /* JSBaseNavigationController.m */,
+				F7CEC17A2146B28700BAC9E2 /* JSBaseViewController.h */,
+				F7CEC17D2146B28700BAC9E2 /* JSBaseViewController.m */,
 			);
 			path = Main_universal;
 			sourceTree = "<group>";
@@ -278,10 +285,6 @@
 		F7CEC144214538B300BAC9E2 /* Main_iPhone */ = {
 			isa = PBXGroup;
 			children = (
-				F7CEC151214538B300BAC9E2 /* JSBaseViewController.h */,
-				F7CEC158214538B300BAC9E2 /* JSBaseViewController.m */,
-				F7CEC157214538B300BAC9E2 /* JSBaseNavigationController.h */,
-				F7CEC147214538B300BAC9E2 /* JSBaseNavigationController.m */,
 				F7CEC16E2145492100BAC9E2 /* JSPhoneTabBarController.h */,
 				F7CEC16F2145492100BAC9E2 /* JSPhoneTabBarController.m */,
 			);
@@ -291,6 +294,7 @@
 		F7CEC16A2145465600BAC9E2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F7CEC1762146B0D700BAC9E2 /* 综合资讯 */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -308,6 +312,15 @@
 				F7CEC174214694AC00BAC9E2 /* user_default@3x.png */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		F7CEC1762146B0D700BAC9E2 /* 综合资讯 */ = {
+			isa = PBXGroup;
+			children = (
+				F7CEC1772146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.h */,
+				F7CEC1782146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m */,
+			);
+			path = "综合资讯";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -604,12 +617,13 @@
 				68F29FF62146752400F24AAF /* JSMasterButton.m in Sources */,
 				68F29FF3214674DF00F24AAF /* JSMasterItem.m in Sources */,
 				F7CEC1352144C55300BAC9E2 /* AppDelegate.m in Sources */,
+				F7CEC17E2146B28700BAC9E2 /* JSBaseNavigationController.m in Sources */,
+				F7CEC17F2146B28700BAC9E2 /* JSBaseViewController.m in Sources */,
 				F7CEC15C214538B300BAC9E2 /* JSMasterViewController.m in Sources */,
 				68FF2F0C214646D20045CF51 /* JSNavigationBar.m in Sources */,
-				F7CEC167214538B300BAC9E2 /* JSBaseViewController.m in Sources */,
+				F7CEC1792146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m in Sources */,
 				F7CEC1702145492100BAC9E2 /* JSPhoneTabBarController.m in Sources */,
 				68F29FF02146738B00F24AAF /* JSBaseModel.m in Sources */,
-				F7CEC161214538B300BAC9E2 /* JSBaseNavigationController.m in Sources */,
 				F7CEC15E214538B300BAC9E2 /* JSSplitController.m in Sources */,
 				F7CEC15D214538B300BAC9E2 /* JSDetailViewController.m in Sources */,
 				F7CEC1342144C55300BAC9E2 /* main.m in Sources */,
