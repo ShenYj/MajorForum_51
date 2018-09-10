@@ -79,11 +79,10 @@
 - (void)prepareNavigationRootViewController:(JSBaseViewController *)rooViewController {
     //rooViewController.title = _masterItem.title;等同于下面的设置
     rooViewController.js_navigationItem.title = _masterItem.title;
-    rooViewController.view.backgroundColor = [UIColor js_randomColor];
     if (_masterItem.segmentItem) {
         // 设置分段控件
         UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:_masterItem.segmentItem];
-        rooViewController.navigationItem.titleView = segment;
+        rooViewController.js_navigationItem.titleView = segment;
         // 分段控件颜色
         segment.tintColor = [UIColor colorWithWhite:34 / 255.0 alpha:1.0];
         // 默认的选中索引

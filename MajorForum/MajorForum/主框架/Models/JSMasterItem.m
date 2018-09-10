@@ -23,11 +23,11 @@ static NSArray <JSMasterItem *> *_menumItems;
 + (NSArray <JSMasterItem *> *)menumItems {
     if (_menumItems == nil) {
         NSArray *data = @[
-                          @{ @"title":@"综合资讯", @"imageName":@"tabBar_news", @"controllerClassName":@"JSComprehensiveInformationVC_iPad", @"segmetnItem":@[@"全部动态",@"好友动态"]},
+                          @{ @"title":@"综合资讯", @"imageName":@"tabBar_news", @"controllerClassName":@"JSComprehensiveInformationVC_iPad", @"segmentItem":@[@"  新 帖  ",@"  精 华  "]},
                           @{ @"title":@"ThinkPad技术论坛", @"imageName":@"tabBar_ThinkPad", @"controllerClassName":@"JSBaseViewController"},
                           @{ @"title":@"智能手机与外设专区", @"imageName":@"tabBar_MobilePhone", @"controllerClassName":@"JSBaseViewController"},
                           @{ @"title":@"品牌笔记本专区", @"imageName":@"tabBar_OtherLaptops", @"controllerClassName":@"JSBaseViewController"},
-                          @{ @"title":@"交易与市场论坛", @"imageName":@"tabBar_Business", @"controllerClassName":@"JSBaseViewController", @"segmetnItem":@[@"我的好友",@"特别关注"]},
+                          @{ @"title":@"交易与市场论坛", @"imageName":@"tabBar_Business", @"controllerClassName":@"JSBaseViewController", @"segmentItem":@[@"1111",@"2222"]},
                           @{ @"title":@"系统与软件专区", @"imageName":@"tabBar_Software", @"controllerClassName":@"JSBaseViewController"},
                           @{ @"title":@"论坛与站务公告", @"imageName":@"tabBar_Gonggao", @"composeArea":@YES, @"controllerClassName":@"JSBaseViewController" },
                           @{ @"title":@"内部事项", @"imageName":@"tabBar_Shiwu", @"composeArea":@YES, @"controllerClassName":@"JSBaseViewController" },
