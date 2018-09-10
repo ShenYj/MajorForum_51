@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68F29FF02146738B00F24AAF /* JSBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F29FEF2146738B00F24AAF /* JSBaseModel.m */; };
+		68F29FF3214674DF00F24AAF /* JSMasterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F29FF2214674DF00F24AAF /* JSMasterItem.m */; };
+		68F29FF62146752400F24AAF /* JSMasterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F29FF52146752400F24AAF /* JSMasterButton.m */; };
 		68FF2F0C214646D20045CF51 /* JSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FF2F0B214646D20045CF51 /* JSNavigationBar.m */; };
 		9E7CD9C221B4BF206B94CC38 /* libPods-MajorForumTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5DB5CA9B1BFFC1383F25D7 /* libPods-MajorForumTests.a */; };
 		A71417EF9029DF840F0129EA /* libPods-MajorForumUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1707D2B9477983B3F8CC307 /* libPods-MajorForumUITests.a */; };
@@ -47,6 +50,12 @@
 		2F38730FCAFD524D983EB493 /* Pods-MajorForum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajorForum.release.xcconfig"; path = "Pods/Target Support Files/Pods-MajorForum/Pods-MajorForum.release.xcconfig"; sourceTree = "<group>"; };
 		4EBD13C8DE89C602A126EA27 /* Pods-MajorForum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajorForum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MajorForum/Pods-MajorForum.debug.xcconfig"; sourceTree = "<group>"; };
 		63DF7F142A4F1F23C80CDEAD /* Pods-MajorForumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajorForumUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MajorForumUITests/Pods-MajorForumUITests.release.xcconfig"; sourceTree = "<group>"; };
+		68F29FEE2146738B00F24AAF /* JSBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSBaseModel.h; sourceTree = "<group>"; };
+		68F29FEF2146738B00F24AAF /* JSBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSBaseModel.m; sourceTree = "<group>"; };
+		68F29FF1214674DF00F24AAF /* JSMasterItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMasterItem.h; sourceTree = "<group>"; };
+		68F29FF2214674DF00F24AAF /* JSMasterItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMasterItem.m; sourceTree = "<group>"; };
+		68F29FF42146752400F24AAF /* JSMasterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMasterButton.h; sourceTree = "<group>"; };
+		68F29FF52146752400F24AAF /* JSMasterButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMasterButton.m; sourceTree = "<group>"; };
 		68FF2F0A214646D20045CF51 /* JSNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSNavigationBar.h; sourceTree = "<group>"; };
 		68FF2F0B214646D20045CF51 /* JSNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSNavigationBar.m; sourceTree = "<group>"; };
 		6D5DB5CA9B1BFFC1383F25D7 /* libPods-MajorForumTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MajorForumTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,11 +144,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		68F29FED2146736800F24AAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				68F29FEE2146738B00F24AAF /* JSBaseModel.h */,
+				68F29FEF2146738B00F24AAF /* JSBaseModel.m */,
+				68F29FF1214674DF00F24AAF /* JSMasterItem.h */,
+				68F29FF2214674DF00F24AAF /* JSMasterItem.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		68FF2F09214646A10045CF51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				68FF2F0A214646D20045CF51 /* JSNavigationBar.h */,
 				68FF2F0B214646D20045CF51 /* JSNavigationBar.m */,
+				68F29FF42146752400F24AAF /* JSMasterButton.h */,
+				68F29FF52146752400F24AAF /* JSMasterButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,7 +194,6 @@
 				F7CEC1362144C56100BAC9E2 /* 主框架 */,
 				F7CEC16A2145465600BAC9E2 /* Controllers */,
 				F7CEC16D2145468400BAC9E2 /* Views */,
-				F7CEC16C2145467E00BAC9E2 /* Models */,
 				F7CEC1282144C55300BAC9E2 /* SupportingFiles */,
 			);
 			path = MajorForum;
@@ -214,18 +235,11 @@
 		F7CEC1362144C56100BAC9E2 /* 主框架 */ = {
 			isa = PBXGroup;
 			children = (
+				68F29FED2146736800F24AAF /* Models */,
 				68FF2F09214646A10045CF51 /* Views */,
 				F7CEC13B214538B300BAC9E2 /* Controllers */,
-				F7CEC1382144C56100BAC9E2 /* Models */,
 			);
 			path = "主框架";
-			sourceTree = "<group>";
-		};
-		F7CEC1382144C56100BAC9E2 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		F7CEC13B214538B300BAC9E2 /* Controllers */ = {
@@ -276,13 +290,6 @@
 			children = (
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		F7CEC16C2145467E00BAC9E2 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		F7CEC16D2145468400BAC9E2 /* Views */ = {
@@ -582,11 +589,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F29FF62146752400F24AAF /* JSMasterButton.m in Sources */,
+				68F29FF3214674DF00F24AAF /* JSMasterItem.m in Sources */,
 				F7CEC1352144C55300BAC9E2 /* AppDelegate.m in Sources */,
 				F7CEC15C214538B300BAC9E2 /* JSMasterViewController.m in Sources */,
 				68FF2F0C214646D20045CF51 /* JSNavigationBar.m in Sources */,
 				F7CEC167214538B300BAC9E2 /* JSBaseViewController.m in Sources */,
 				F7CEC1702145492100BAC9E2 /* JSPhoneTabBarController.m in Sources */,
+				68F29FF02146738B00F24AAF /* JSBaseModel.m in Sources */,
 				F7CEC161214538B300BAC9E2 /* JSBaseNavigationController.m in Sources */,
 				F7CEC15E214538B300BAC9E2 /* JSSplitController.m in Sources */,
 				F7CEC15D214538B300BAC9E2 /* JSDetailViewController.m in Sources */,

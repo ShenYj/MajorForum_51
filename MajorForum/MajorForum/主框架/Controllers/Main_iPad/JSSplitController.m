@@ -18,8 +18,7 @@
 
 @implementation JSSplitController
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         // 设置主视图
@@ -32,22 +31,15 @@
     }
     return self;
 }
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // 设置SplitViewController
     [self prepareSplitViewController];
 }
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 // 设置SplitViewController
-- (void)prepareSplitViewController
-{
+- (void)prepareSplitViewController {
     self.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
     // 监听设备朝向变化通知
     [[NSNotificationCenter defaultCenter] addObserver: self
@@ -57,8 +49,7 @@
 }
 
 // 监听设备朝向变化时调用的方法
-- (void)orientationDidChangeNotification
-{
+- (void)orientationDidChangeNotification {
     // 设置主视图的宽度比例 (主视图宽度 / SplitVc整体宽度)  比例不好控制&受最大(maximumPrimaryColumnWidth)最小值(minimumPrimaryColumnWidth)约束
     // 直接设置最大宽度为一个固定值
     BOOL isPortrait = UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation);
@@ -74,11 +65,16 @@
     [self.masterViewController updateSubViewsWithPortrait:isPortrait];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
 #pragma mark -- UITraitEnvironment
 
 // 当SizeClass发生变化后调用
-- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
-{
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
     // 判断当前的SizeClass,如果为width compact&height regular 则说明正在分屏
     BOOL showContainer = (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) && (self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassRegular);
     [self.masterViewController showContainerView:showContainer];
@@ -91,6 +87,7 @@
         [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     }
 }
+
 
 
 @end
