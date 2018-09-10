@@ -1,8 +1,8 @@
 //
-//  JSNavigationController.h
-//  BaseViewController
+//  JSBaseNavigationController.h
 //
-//  Created by ShenYj on 2016/11/17.
+//
+//  Created by ShenYj on 2018/09/10.
 //  Copyright © 2016年 ShenYj. All rights reserved.
 //
 
@@ -10,8 +10,8 @@
 
 @interface JSBaseNavigationController : UINavigationController
 
-/** Push时是否隐藏底部TabBar */
-@property (nonatomic,assign) BOOL bottomBarHiddenWhenPushed;
+///** Push时是否隐藏底部TabBar */
+//@property (nonatomic,assign) BOOL bottomBarHiddenWhenPushed;
 
 
 @end

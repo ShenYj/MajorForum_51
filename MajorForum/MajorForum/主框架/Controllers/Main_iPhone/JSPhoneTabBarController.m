@@ -28,29 +28,31 @@
 //    }];
 //    [self setValue:tabBar forKey:@"tabBar"];
     
+    self.tabBar.tintColor = THEME_COLOUR;
+    
     // 添加子控制器
-    [self addChildViewControllers:[[UIViewController alloc] init] withImageName:@"tabbar_icon_auth" withTitle:@"动态"];
-    [self addChildViewControllers:[[UIViewController alloc] init] withImageName:@"tabbar_icon_at" withTitle:@"与我相关"];
-    [self addChildViewControllers:[[UIViewController alloc] init] withImageName:@"tabbar_icon_space" withTitle:@"我的"];
-    [self addChildViewControllers:[[UIViewController alloc] init] withImageName:@"tabbar_icon_more" withTitle:@"玩吧"];
+    [self addChildViewControllers:[[JSBaseViewController alloc] init] withImageName:@"tabbar_home" withTitle:@"首页"];
+    [self addChildViewControllers:[[JSBaseViewController alloc] init] withImageName:@"tabbar_discover" withTitle:@"板块"];
+    [self addChildViewControllers:[[JSBaseViewController alloc] init] withImageName:@"tabbar_message" withTitle:@"消息"];
+    [self addChildViewControllers:[[JSBaseViewController alloc] init] withImageName:@"tabbar_mine" withTitle:@"我的"];
     
 }
 
 // 添加子控制器&设置子控制器标题和图片
-- (void)addChildViewControllers:(UIViewController *)viewController withImageName:(NSString *)imageName withTitle:(NSString *)title{
+- (void)addChildViewControllers:(JSBaseViewController *)viewController withImageName:(NSString *)imageName withTitle:(NSString *)title {
     
-    UIImage *image = [UIImage imageNamed:imageName];
-    UIImage *selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_click",imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    viewController.tabBarItem.title = title;
-    viewController.tabBarItem.image = image;
+    UIImage *image         = [UIImage imageNamed:imageName];
+    UIImage *selectedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",imageName]];
+//    UIImage *selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    viewController.js_navigationItem.title  = title;
+    viewController.tabBarItem.title         = title;
+    viewController.tabBarItem.image         = image;
     viewController.tabBarItem.selectedImage = selectedImage;
     
-//    // 设置tabbarItem字体颜色
-//    [viewController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor RGBColorWithRed:255 withGreen:205 withBlue:25]} forState:UIControlStateSelected];
-//    
+    // 设置tabbarItem字体颜色
+    [viewController.tabBarItem setTitleTextAttributes: @{ NSForegroundColorAttributeName: THEME_COLOUR }
+                                             forState: UIControlStateSelected];
     [self addChildViewController:viewController];
-    
 }
 
 - (void)didReceiveMemoryWarning {

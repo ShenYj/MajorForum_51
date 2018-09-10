@@ -1,14 +1,10 @@
-
-/******************************************************
- 
- @discusstion:   基类控制器
- 
- @author：   ShenYj
- 
- @email:    shenyj4@51nb.com
- 
- ******************************************************/
-
+//
+//  JSBaseNavigationController.h
+//
+//
+//  Created by ShenYj on 2018/09/10.
+//  Copyright © 2016年 ShenYj. All rights reserved.
+//
 
 
 #import "JSBaseNavigationController.h"
@@ -17,35 +13,32 @@
 
 // 记录push标志
 @property (nonatomic, assign, getter=isPushing) BOOL pushing;
-//@property (nonatomic,strong) UIButton                *backButton;
+@property (nonatomic,strong) UIButton                *js_backButton;
 
 @end
 
 @implementation JSBaseNavigationController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationBar.hidden = YES;
-    
     self.delegate = self;
-//    [self.navigationBar setTitleTextAttributes:@{
-//                                                 NSFontAttributeName: [UIFont systemFontOfSize:18],
-//                                                 NSForegroundColorAttributeName: [UIColor js_colorWithHex:0x333333],
-//                                                 }];
-//    self.navigationBar.barTintColor = [UIColor whiteColor];
+    [self.navigationBar setTitleTextAttributes:@{
+                                                 NSFontAttributeName: [UIFont systemFontOfSize:18],
+                                                 NSForegroundColorAttributeName: [UIColor js_colorWithHex:0x333333],
+                                                 }];
+    self.navigationBar.barTintColor = [UIColor whiteColor];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     // 更换导航栏底边线条颜色
     [self changeNavigationbarBottomLineColor:[UIColor js_colorWithHex:0xe4e4e4]];
 }
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
     if (self.pushing == YES) {
         return;
     } else {
@@ -56,29 +49,23 @@
         // 设置全局隐藏底部TabBar
         viewController.hidesBottomBarWhenPushed = YES;
         // 设置返回按钮
-//        if ([viewController isKindOfClass:[JSBaseViewController class]]) {
-//            JSBaseViewController *nextVC = (JSBaseViewController *)viewController;
-//            NSString *title = @"  ";    // 返回
-//            if (self.childViewControllers.count == 1) {
-//                JSBaseViewController *parentVC = self.childViewControllers.firstObject;
-//                title = parentVC.navigationItem.title;
-//            }
-//            nextVC.navigationItem.leftBarButtonItem = nil;
-//            [UIBarButtonItem appearance].tintColor = [UIColor grayColor];
-//            nextVC.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.backButton];
-//        }
+        if ([viewController isKindOfClass:[JSBaseViewController class]]) {
+            JSBaseViewController *nextVC = (JSBaseViewController *)viewController;
+            NSString *title = @"  ";    // 返回
+            if (self.childViewControllers.count == 1) {
+                JSBaseViewController *parentVC = self.childViewControllers.firstObject;
+                title = parentVC.navigationItem.title;
+            }
+            nextVC.navigationItem.leftBarButtonItem = nil;
+            [UIBarButtonItem appearance].tintColor = [UIColor grayColor];
+            nextVC.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.js_backButton];
+        }
     }
     [super pushViewController:viewController animated:animated];
 }
 
-//- (void)goBackToParentController:(UIBarButtonItem *)sender
-//{
-//    [self popViewControllerAnimated:YES];
-//}
-
 /*** 隐藏导航栏底边的线 ***/
-- (void)hideNavigationBarBottomLine
-{
+- (void)hideNavigationBarBottomLine {
     [self.navigationBar.subviews enumerateObjectsUsingBlock: ^(UIView *view, NSUInteger idx, BOOL *stop) {
         if ( iOS10 ) {
             // iOS10,改变了导航栏的私有接口为_UIBarBackground
@@ -97,8 +84,7 @@
 }
 
 /*** 改变导航栏底边线的颜色 ***/
-- (void)changeNavigationbarBottomLineColor:(UIColor *)colour
-{
+- (void)changeNavigationbarBottomLineColor:(UIColor *)colour {
     // 查看View层次结构
     //[UIView logHierarchyWithThisView:self.navigationBar];
     CGFloat systemVersion = [UIDevice currentDevice].systemVersion.floatValue;
@@ -156,27 +142,30 @@
     }
 }
 
+- (void)goBackToParentController:(UIBarButtonItem *)sender {
+    [self popViewControllerAnimated:YES];
+}
+
 #pragma mark - UINavigationControllerDelegate
 
-- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     self.pushing = NO;
 }
 
-//#pragma mark - lazy
-//- (UIButton *)backButton {
-//    if (!_backButton) {
-//        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        _backButton.frame = CGRectMake(0, 0, SYRealValueW(60), 25);
-//        _backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 20);
-//        [_backButton setImage:[UIImage imageNamed:@"back_Img"] forState:UIControlStateNormal];
-//        [_backButton setTitle:@"    " forState:UIControlStateNormal];
-//        [_backButton addTarget: self
-//                        action: @selector(goBackToParentController:)
-//              forControlEvents: UIControlEventTouchUpInside];
-//    }
-//    return _backButton;
-//}
-
+#pragma mark - lazy
+- (UIButton *)js_backButton {
+    if (!_js_backButton) {
+        _js_backButton                 = [UIButton buttonWithType:UIButtonTypeCustom];
+        _js_backButton.frame           = CGRectMake(0, 0, 40, 40);
+        _js_backButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        //_backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 20);
+        [_js_backButton setImage:[UIImage imageNamed:@"back_Img"] forState:UIControlStateNormal];
+        [_js_backButton setTitle:@"  " forState:UIControlStateNormal];
+        [_js_backButton addTarget: self
+                        action: @selector(goBackToParentController:)
+              forControlEvents: UIControlEventTouchUpInside];
+    }
+    return _js_backButton;
+}
 
 @end
