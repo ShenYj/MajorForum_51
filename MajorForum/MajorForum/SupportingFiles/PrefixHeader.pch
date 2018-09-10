@@ -66,6 +66,19 @@
 
 
 
+#pragma mark - URL
+
+#ifdef DEBUG // 测试阶段
+// 登录
+static NSString * const longinUrlString = @"http://forum.51nb.com/mobcent/app/web/index.php?r=user/login";
+// 最新
+static NSString * const HomePageNewTopicsUrlString = @"http://forum.51nb.com/mobcent/app/web/index.php?r=forum/topiclist";
+
+
+#else // 发布阶段
+
+#endif
+
 
 #endif
 #endif /* PrefixHeader_pch */

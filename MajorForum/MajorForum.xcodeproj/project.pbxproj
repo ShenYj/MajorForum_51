@@ -29,6 +29,9 @@
 		F7CEC1792146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC1782146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m */; };
 		F7CEC17E2146B28700BAC9E2 /* JSBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC17C2146B28700BAC9E2 /* JSBaseNavigationController.m */; };
 		F7CEC17F2146B28700BAC9E2 /* JSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC17D2146B28700BAC9E2 /* JSBaseViewController.m */; };
+		F7CEC1832146B56500BAC9E2 /* JSNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC1822146B56500BAC9E2 /* JSNetworkTool.m */; };
+		F7CEC1862146B6AA00BAC9E2 /* JSNetworkTool+JSOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC1852146B6AA00BAC9E2 /* JSNetworkTool+JSOAuth.m */; };
+		F7CEC1892146B7CC00BAC9E2 /* JSNetworkTool+JSComprehensiveInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC1882146B7CC00BAC9E2 /* JSNetworkTool+JSComprehensiveInformation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,12 @@
 		F7CEC17B2146B28700BAC9E2 /* JSBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseNavigationController.h; sourceTree = "<group>"; };
 		F7CEC17C2146B28700BAC9E2 /* JSBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseNavigationController.m; sourceTree = "<group>"; };
 		F7CEC17D2146B28700BAC9E2 /* JSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseViewController.m; sourceTree = "<group>"; };
+		F7CEC1812146B56500BAC9E2 /* JSNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSNetworkTool.h; sourceTree = "<group>"; };
+		F7CEC1822146B56500BAC9E2 /* JSNetworkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSNetworkTool.m; sourceTree = "<group>"; };
+		F7CEC1842146B6AA00BAC9E2 /* JSNetworkTool+JSOAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSNetworkTool+JSOAuth.h"; sourceTree = "<group>"; };
+		F7CEC1852146B6AA00BAC9E2 /* JSNetworkTool+JSOAuth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JSNetworkTool+JSOAuth.m"; sourceTree = "<group>"; };
+		F7CEC1872146B7CC00BAC9E2 /* JSNetworkTool+JSComprehensiveInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSNetworkTool+JSComprehensiveInformation.h"; sourceTree = "<group>"; };
+		F7CEC1882146B7CC00BAC9E2 /* JSNetworkTool+JSComprehensiveInformation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JSNetworkTool+JSComprehensiveInformation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +205,7 @@
 		F7CEC0F52144C44B00BAC9E2 /* MajorForum */ = {
 			isa = PBXGroup;
 			children = (
+				F7CEC1802146B54100BAC9E2 /* NetworkTool */,
 				F7CEC1712146933700BAC9E2 /* Sources */,
 				F7CEC1362144C56100BAC9E2 /* 主框架 */,
 				F7CEC16A2145465600BAC9E2 /* Controllers */,
@@ -321,6 +331,19 @@
 				F7CEC1782146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m */,
 			);
 			path = "综合资讯";
+			sourceTree = "<group>";
+		};
+		F7CEC1802146B54100BAC9E2 /* NetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				F7CEC1812146B56500BAC9E2 /* JSNetworkTool.h */,
+				F7CEC1822146B56500BAC9E2 /* JSNetworkTool.m */,
+				F7CEC1842146B6AA00BAC9E2 /* JSNetworkTool+JSOAuth.h */,
+				F7CEC1852146B6AA00BAC9E2 /* JSNetworkTool+JSOAuth.m */,
+				F7CEC1872146B7CC00BAC9E2 /* JSNetworkTool+JSComprehensiveInformation.h */,
+				F7CEC1882146B7CC00BAC9E2 /* JSNetworkTool+JSComprehensiveInformation.m */,
+			);
+			path = NetworkTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -614,12 +637,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7CEC1892146B7CC00BAC9E2 /* JSNetworkTool+JSComprehensiveInformation.m in Sources */,
 				68F29FF62146752400F24AAF /* JSMasterButton.m in Sources */,
 				68F29FF3214674DF00F24AAF /* JSMasterItem.m in Sources */,
 				F7CEC1352144C55300BAC9E2 /* AppDelegate.m in Sources */,
 				F7CEC17E2146B28700BAC9E2 /* JSBaseNavigationController.m in Sources */,
 				F7CEC17F2146B28700BAC9E2 /* JSBaseViewController.m in Sources */,
+				F7CEC1832146B56500BAC9E2 /* JSNetworkTool.m in Sources */,
 				F7CEC15C214538B300BAC9E2 /* JSMasterViewController.m in Sources */,
+				F7CEC1862146B6AA00BAC9E2 /* JSNetworkTool+JSOAuth.m in Sources */,
 				68FF2F0C214646D20045CF51 /* JSNavigationBar.m in Sources */,
 				F7CEC1792146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m in Sources */,
 				F7CEC1702145492100BAC9E2 /* JSPhoneTabBarController.m in Sources */,

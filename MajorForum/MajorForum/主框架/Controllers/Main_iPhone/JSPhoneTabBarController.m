@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 //    // 设置自定义TabBar
 //    JSTabBar *tabBar = [[JSTabBar alloc] init];
 //    // 自定义TabBar的ComposeButton点击回调Block
