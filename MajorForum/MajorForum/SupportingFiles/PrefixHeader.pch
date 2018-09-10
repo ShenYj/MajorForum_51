@@ -42,7 +42,7 @@
 #define NAVIGA_BAR_H self.navigationController.navigationBar.frame.size.height                  // 导航栏高度
 #define NAV_STATUS_BAR_Height ((STATUS_BAR_H) + (NAVIGA_BAR_H))                                 // 导航栏 + 状态栏的高度
 
-#define iOS8 (([UIDevice currentDevice].systemVersion.floatValue) >= (8.0))                     //  iOS 8
+//#define iOS8 (([UIDevice currentDevice].systemVersion.floatValue) >= (8.0))                     //  iOS 8
 #define iOS9 (([UIDevice currentDevice].systemVersion.floatValue) >= (9.0))                     //  iOS 9
 #define iOS10 (([UIDevice currentDevice].systemVersion.floatValue) >= (10.0))                   //  iOS 10
 #define iOS11 (([UIDevice currentDevice].systemVersion.floatValue) >= (11.0))                   //  iOS 11

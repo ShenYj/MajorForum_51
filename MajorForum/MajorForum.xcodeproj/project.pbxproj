@@ -27,6 +27,7 @@
 		F7CEC161214538B300BAC9E2 /* JSBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC147214538B300BAC9E2 /* JSBaseNavigationController.m */; };
 		F7CEC167214538B300BAC9E2 /* JSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC158214538B300BAC9E2 /* JSBaseViewController.m */; };
 		F7CEC1702145492100BAC9E2 /* JSPhoneTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC16F2145492100BAC9E2 /* JSPhoneTabBarController.m */; };
+		F7CEC175214694AC00BAC9E2 /* user_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7CEC174214694AC00BAC9E2 /* user_default@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		F7CEC158214538B300BAC9E2 /* JSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseViewController.m; sourceTree = "<group>"; };
 		F7CEC16E2145492100BAC9E2 /* JSPhoneTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSPhoneTabBarController.h; sourceTree = "<group>"; };
 		F7CEC16F2145492100BAC9E2 /* JSPhoneTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSPhoneTabBarController.m; sourceTree = "<group>"; };
+		F7CEC174214694AC00BAC9E2 /* user_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_default@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 		F7CEC0F52144C44B00BAC9E2 /* MajorForum */ = {
 			isa = PBXGroup;
 			children = (
+				F7CEC1712146933700BAC9E2 /* Sources */,
 				F7CEC1362144C56100BAC9E2 /* 主框架 */,
 				F7CEC16A2145465600BAC9E2 /* Controllers */,
 				F7CEC16D2145468400BAC9E2 /* Views */,
@@ -297,6 +300,14 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F7CEC1712146933700BAC9E2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F7CEC174214694AC00BAC9E2 /* user_default@3x.png */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7CEC175214694AC00BAC9E2 /* user_default@3x.png in Resources */,
 				F7CEC1032144C44C00BAC9E2 /* LaunchScreen.storyboard in Resources */,
 				F7CEC1312144C55300BAC9E2 /* Assets.xcassets in Resources */,
 				F7CEC0FE2144C44B00BAC9E2 /* Main.storyboard in Resources */,

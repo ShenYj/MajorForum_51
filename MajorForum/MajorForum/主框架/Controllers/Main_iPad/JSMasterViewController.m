@@ -40,7 +40,7 @@
 }
 
 - (void)setUpMasterView {
-    self.view.backgroundColor = [UIColor js_randomColor];
+    self.view.backgroundColor = [UIColor darkGrayColor];
     // 设置容器视图
     [self prepareContainerView];
 }
@@ -48,7 +48,6 @@
 // 设置菜单区视图
 - (void)prepareMenuView {
     // 添加子视图(UIButton)
-    NSLog(@"菜单个数: %zd",JSMasterItem.menumItems.count);
     for (JSMasterItem *item in JSMasterItem.menumItems) {
         JSMasterButton *button = [[JSMasterButton alloc] initWithItem:item];
         if (item.isComposeArea) {
@@ -81,7 +80,7 @@
 // 设置头像视图
 - (void)prepareIconButton {
     // 设置头像图片
-    [self.iconButton setImage:[UIImage imageNamed:@"default_person_lit"] forState:UIControlStateNormal];
+//    [self.iconButton setImage:[UIImage imageNamed:@"user_default"] forState:UIControlStateNormal];
     // 设置约束
     // button有固有尺寸,使用autolayout时,如果没有设置宽高,就会使用默认的系统设置进行宽高的设置:
     // 隐式调用sizeToFit方法,该方法会根据原始尺寸进行设置
@@ -145,6 +144,11 @@
         // 设置昵称
         self.nameLabel.text = @"一只耳";
     }
+    // 取出所有的菜单区按钮,将横竖屏情况传递给按钮
+    for (JSMasterButton *button in self.menuArea_StackView.subviews) {
+        // 将横竖屏传递给JSButton
+        [button prepareContentEdgeWithPortrait:portrait];
+    }
 }
 
 #pragma mark -- 事件响应
@@ -154,8 +158,8 @@
         return;
     }
     self.selectedButton.selected = NO;
-    sender.selected = YES;
-    self.selectedButton = sender;
+    sender.selected              = YES;
+    self.selectedButton          = sender;
     // 判断按钮类型
     if (sender.item.isComposeArea) {
         // 撰写区
@@ -209,8 +213,59 @@
 
 #pragma mark -- lazy
 
+#pragma mark -- 懒加载
+
+- (UIStackView *)composeArea_StackView {
+    if (_composeArea_StackView == nil) {
+        _composeArea_StackView = [[UIStackView alloc] init];
+        [self.view addSubview:_composeArea_StackView];
+        self.composeArea_StackView.distribution = UIStackViewDistributionFillEqually;
+        [self.composeArea_StackView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.left.right.mas_equalTo(self.view);
+            make.height.mas_equalTo(kMenumButtonLandScapeHeight);
+        }];
+    }
+    return _composeArea_StackView;
+}
+
+- (UIStackView *)menuArea_StackView {
+    if (_menuArea_StackView == nil) {
+        _menuArea_StackView = [[UIStackView alloc] init];
+        [self.view addSubview:_menuArea_StackView];
+        // 设置为垂直排列
+        self.menuArea_StackView.axis = UILayoutConstraintAxisVertical;
+        [self.menuArea_StackView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.mas_equalTo(self.composeArea_StackView.mas_top);
+            make.left.right.mas_equalTo(self.view);
+        }];
+    }
+    return _menuArea_StackView;
+}
+
+- (UIButton *)iconButton {
+    if (_iconButton == nil) {
+        _iconButton      = [[UIButton alloc] init];
+        UIImage *iconIMG = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"user_default@3x.png" ofType:nil]];
+        [_iconButton setImage:iconIMG forState:UIControlStateNormal];
+        _iconButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [self.view addSubview:_iconButton];
+    }
+    return _iconButton;
+}
+
+- (UILabel *)nameLabel {
+    if (_nameLabel == nil) {
+        _nameLabel               = [[UILabel alloc] init];
+        _nameLabel.textColor     = [UIColor whiteColor];
+        _nameLabel.font          = [UIFont boldSystemFontOfSize:20];
+        _nameLabel.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:_nameLabel];
+    }
+    return _nameLabel;
+}
+
 - (NSMutableDictionary *)subViewControllersCache {
-    if (!_subViewControllersCache) {
+    if (_subViewControllersCache == nil) {
         _subViewControllersCache = [NSMutableDictionary dictionary];
     }
     return _subViewControllersCache;

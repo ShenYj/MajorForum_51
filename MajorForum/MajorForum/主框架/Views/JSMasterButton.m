@@ -33,6 +33,7 @@
 //}
 
 - (void)setupUI {
+    self.titleLabel.font = [UIFont systemFontOfSize:12];
     // 取消系统默认的高亮状态渲染
     self.adjustsImageWhenHighlighted = NO;
     // 设置正常状态图片
@@ -43,10 +44,8 @@
     UIImageView *seperatorImageView = [[UIImageView alloc] init];
     [self addSubview:seperatorImageView];
     
-    
     if (_item.isComposeArea) {
         // 撰写区
-        
         // 分割线ImageView
         seperatorImageView.image = [UIImage imageNamed:@"tabbar_separate_g_line_v"];
         [seperatorImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -79,10 +78,8 @@
         self.imageEdgeInsets = UIEdgeInsetsZero;
         // 设置图片间距
         self.imageEdgeInsets = UIEdgeInsetsZero;
-        
         // 设置标题
         [self setTitle:nil forState:UIControlStateNormal];
-        
     } else {
         // 横屏
         // button整体内容左对齐

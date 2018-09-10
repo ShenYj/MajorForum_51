@@ -25,9 +25,9 @@
         self.masterViewController = [[JSMasterViewController alloc] init];
         [self addChildViewController:self.masterViewController];
         // 明细视图
-        UIViewController *detailController = [[UIViewController alloc] init];
-        detailController.view.backgroundColor = [UIColor js_randomColor];
-        [self addChildViewController:detailController];
+//        UIViewController *detailController = [[UIViewController alloc] init];
+//        detailController.view.backgroundColor = [UIColor js_randomColor];
+//        [self addChildViewController:detailController];
     }
     return self;
 }

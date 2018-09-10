@@ -33,12 +33,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     // 设置容器视图
     [self prepareContainerView];
     
     [self.containerView_NavigationView.view mas_makeConstraints:^(MASConstraintMaker *make) {
         // 这里直接设置上左下右是无效的,需要设置内边距
-        make.edges.mas_equalTo(UIEdgeInsetsMake(20, 0, 0, 40));
+        make.edges.mas_equalTo(UIEdgeInsetsMake([[UIApplication sharedApplication] statusBarFrame].size.height, 0, 0, 10));
+        //make.edges.mas_equalTo(UIEdgeInsetsMake(20, 0, 0, 40));
     }];
 }
 
@@ -47,13 +50,10 @@
     NSString *className = _masterItem.controllerClassName;
     // 使用运行时机制将类名转为类
     Class class = NSClassFromString(className);
-    
     // 导航控制器的根控制器
     UIViewController *viewController = [[class alloc] init];
-    
     // 设置导航控制器的根控制器
     [self prepareNavigationRootViewController:viewController];
-    
     // 创建导航控制器
     self.containerView_NavigationView =[[UINavigationController alloc] initWithRootViewController:viewController];
     // 添加子控制器
@@ -63,10 +63,10 @@
 }
 
 // 遮挡分割线
-- (void)prepareMaskView{
-    
+- (void)prepareMaskView {
     UIView *maskView = [[UIView alloc ] init];
     maskView.backgroundColor = [UIColor colorWithWhite:34 / 255.0 alpha:1.0];
+    maskView.backgroundColor = [UIColor whiteColor];
     [self.view insertSubview:maskView atIndex:0];
     //    [self.view addSubview:maskView];
     [maskView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -75,9 +75,8 @@
 }
 
 // 设置导航控制器的根控制器视图
-- (void)prepareNavigationRootViewController:(UIViewController *)rooViewController{
-    
-    //    rooViewController.title = _masterItem.title;等同于下面的设置
+- (void)prepareNavigationRootViewController:(UIViewController *)rooViewController {
+    //rooViewController.title = _masterItem.title;等同于下面的设置
     rooViewController.navigationItem.title = _masterItem.title;
     if (_masterItem.segmentItem) {
         // 设置分段控件

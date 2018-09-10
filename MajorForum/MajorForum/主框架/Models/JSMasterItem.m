@@ -23,15 +23,15 @@ static NSArray <JSMasterItem *> *_menumItems;
 + (NSArray <JSMasterItem *> *)menumItems {
     if (_menumItems == nil) {
         NSArray *data = @[
-                          @{ @"title":@"综合资讯", @"imageName":@"tab_bar_feed_icon", @"controllerClassName":@"JSHomeTableViewController", @"segmetnItem":@[@"全部动态",@"好友动态"]},
-                          @{ @"title":@"ThinkPad技术论坛", @"imageName":@"tab_bar_passive_feed_icon", @"controllerClassName":@"JSAboutMeTableViewController"},
-                          @{ @"title":@"智能手机与外设专区", @"imageName":@"tab_bar_pic_wall_icon", @"controllerClassName":@"JSPictureWallCollectionViewController"},
-                          @{ @"title":@"品牌笔记本专区", @"imageName":@"tab_bar_e_album_icon", @"controllerClassName":@"JSAlbumTableViewController"},
-                          @{ @"title":@"交易与市场论坛", @"imageName":@"tab_bar_friend_icon", @"controllerClassName":@"JSMyFriendTableViewController", @"segmetnItem":@[@"我的好友",@"特别关注"]},
-                          @{ @"title":@"系统与软件专区", @"imageName":@"tab_bar_e_more_icon", @"controllerClassName":@"JSMoreAppTableViewController"},
-                          @{ @"title":@"论坛与站务公告", @"imageName":@"tabbar_mood", @"composeArea":@YES, @"controllerClassName":@"JSComposeViewController" },
-                          @{ @"title":@"内部事项", @"imageName":@"tabbar_photo", @"composeArea":@YES, @"controllerClassName":@"JSComposeViewController" },
-                          @{ @"title":@"个人中心", @"imageName":@"tabbar_blog", @"composeArea":@YES, @"controllerClassName":@"JSComposeViewController"  }
+                          @{ @"title":@"综合资讯", @"imageName":@"tabBar_news", @"controllerClassName":@"JSBaseViewController", @"segmetnItem":@[@"全部动态",@"好友动态"]},
+                          @{ @"title":@"ThinkPad技术论坛", @"imageName":@"tabBar_ThinkPad", @"controllerClassName":@"JSBaseViewController"},
+                          @{ @"title":@"智能手机与外设专区", @"imageName":@"tabBar_MobilePhone", @"controllerClassName":@"JSBaseViewController"},
+                          @{ @"title":@"品牌笔记本专区", @"imageName":@"tabBar_OtherLaptops", @"controllerClassName":@"JSBaseViewController"},
+                          @{ @"title":@"交易与市场论坛", @"imageName":@"tabBar_Business", @"controllerClassName":@"JSBaseViewController", @"segmetnItem":@[@"我的好友",@"特别关注"]},
+                          @{ @"title":@"系统与软件专区", @"imageName":@"tabBar_Software", @"controllerClassName":@"JSBaseViewController"},
+                          @{ @"title":@"论坛与站务公告", @"imageName":@"tabBar_Gonggao", @"composeArea":@YES, @"controllerClassName":@"JSBaseViewController" },
+                          @{ @"title":@"内部事项", @"imageName":@"tabBar_Shiwu", @"composeArea":@YES, @"controllerClassName":@"JSBaseViewController" },
+                          @{ @"title":@"个人中心", @"imageName":@"tabBar_Mine", @"composeArea":@YES, @"controllerClassName":@"JSBaseViewController"  }
                           ];
         
         NSMutableArray *mArr = [NSMutableArray array];
