@@ -16,7 +16,7 @@
     self.automaticallyChangeAlpha = YES;
     // 隐藏最后更新时间
     self.lastUpdatedTimeLabel.hidden = YES;
-    self.stateLabel.textColor = [UIColor purpleColor];
+    self.stateLabel.textColor = THEME_COLOUR;
     
 }
 

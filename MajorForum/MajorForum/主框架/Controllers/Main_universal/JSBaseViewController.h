@@ -26,5 +26,11 @@
 
 /** 子类实现用于自定义界面 */
 - (void)setUpView;
+/** 下拉刷新方法 */
+- (void)headerWithRefreshingTarget;
+/** 上拉刷新方法 */
+- (void)footerWithRefreshingTarget;
+/** 结束刷新 */
+- (void)endRefresh;
 
 @end

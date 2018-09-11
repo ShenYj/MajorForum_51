@@ -7,6 +7,8 @@
 //
 
 #import "JSBaseViewController.h"
+#import "JSRefreshNormalHeader.h"
+#import "JSRefreshAutoFooter.h"
 
 /*** iPhone X 适配: 左右下边间距 ***/
 static CGFloat const kiPhoneXViewMargin_L = 0;
@@ -72,6 +74,16 @@ static CGFloat const kNavigationBarHeight = 44.f;
         // Fallback on earlier versions
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
+    self.js_tableView.mj_header = [JSRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerWithRefreshingTarget)];
+    self.js_tableView.mj_footer = [JSRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerWithRefreshingTarget)];
+}
+
+- (void)headerWithRefreshingTarget {}
+- (void)footerWithRefreshingTarget {}
+
+- (void)endRefresh {
+    [self.js_tableView.mj_header endRefreshing];
+    [self.js_tableView.mj_footer endRefreshing];
 }
 
 - (void)setUpTableView {
@@ -203,6 +215,9 @@ static CGFloat const kNavigationBarHeight = 44.f;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 44;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - lazy

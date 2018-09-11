@@ -28,43 +28,60 @@ static NSString * const kComprehensiveInformationVCCellReusedID = @"kComprehensi
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.ciType = ComprehensiveInformationTypeNewPosts;
-    [self loadComprehensiveInformationNewDatas];
+    [self loadComprehensiveInformationNewDatas:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)headerWithRefreshingTarget {
+    [self loadComprehensiveInformationNewDatas:YES];
+}
+- (void)footerWithRefreshingTarget {
+    [self loadComprehensiveInformationNewDatas:NO];
+}
+
 /** 请求新帖数据 */
-- (void)loadComprehensiveInformationNewDatas {
-    [[JSNetworkTool sharedNetworkToolManager] getComprehensiveInformationNewDatasFinishedBlock:^(id obj, NSError *error) {
-        if (error != nil || obj == nil) {
-            NSLog(@"请求失败-->!%@",error);
-            return ;
-        }
-        NSLog(@"%@", obj);
-        NSArray *list = obj[@"list"];
-        if ( !list ) {
-            NSLog(@"数据异常");
-            return;
-        }
-        if (list.count == 0) {
-            NSLog(@"返回空");
-            
-        }
-        NSMutableArray *tempArr = [NSMutableArray arrayWithCapacity:list.count];
-        [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            @autoreleasepool {
-                JSFormTopic *model = [JSFormTopic yy_modelWithDictionary:obj];
-                [tempArr addObject:model];
+- (void)loadComprehensiveInformationNewDatas:(BOOL)flag {
+    if (flag) {
+        [[JSNetworkTool sharedNetworkToolManager] getComprehensiveInformationNewDatasFinishedBlock:^(id obj, NSError *error) {
+            if (error != nil || obj == nil) {
+                NSLog(@"请求失败-->!%@",error);
+                [self endRefresh];
+                return ;
             }
+            //NSLog(@"%@", obj);
+            NSArray *list = obj[@"list"];
+            if ( !list ) {
+                NSLog(@"数据异常");
+                return;
+            }
+            if (list.count == 0) {
+                NSLog(@"返回空");
+                
+            }
+            NSMutableArray *tempArr = [NSMutableArray arrayWithArray:self.NewTopicDatas];
+            [list enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                @autoreleasepool {
+                    JSFormTopic *model = [JSFormTopic yy_modelWithDictionary:obj];
+                    if (![tempArr containsObject:model]) {
+                        [tempArr insertObject:model atIndex:0];
+                    }
+                }
+            }];
+            self.NewTopicDatas = tempArr.copy;
+            [self.js_tableView reloadData];
+            [self endRefresh];
         }];
-        self.NewTopicDatas = tempArr.copy;
-        [self.js_tableView reloadData];
-    }];
+        return;
+    }
+    // 上拉
+    [self endRefresh];
 }
 /** 请求精华数据 */
-- (void)loadComprehensiveInformationEssentialDatas {
+- (void)loadComprehensiveInformationEssentialDatas:(BOOL)flag {
     [self.js_tableView reloadData];
 }
 
@@ -79,11 +96,11 @@ static NSString * const kComprehensiveInformationVCCellReusedID = @"kComprehensi
     switch (segment.selectedSegmentIndex) {
         case 0:
             self.ciType = ComprehensiveInformationTypeNewPosts;
-            [self loadComprehensiveInformationNewDatas];
+            [self loadComprehensiveInformationNewDatas:YES];
             break;
         case 1:
             self.ciType = ComprehensiveInformationTypeEssential;
-            [self loadComprehensiveInformationEssentialDatas];
+            [self loadComprehensiveInformationEssentialDatas:YES];
             break;
         default:
             break;
