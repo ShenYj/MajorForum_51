@@ -52,7 +52,7 @@ static NSString * const kComprehensiveInformationVCCellReusedID = @"kComprehensi
                 [self endRefresh];
                 return ;
             }
-            //NSLog(@"%@", obj);
+            NSLog(@"%@", obj);
             NSArray *list = obj[@"list"];
             if ( !list ) {
                 NSLog(@"数据异常");
