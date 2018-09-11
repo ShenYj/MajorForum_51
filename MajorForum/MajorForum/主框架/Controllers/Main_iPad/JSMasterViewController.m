@@ -245,7 +245,7 @@
 - (UIButton *)iconButton {
     if (_iconButton == nil) {
         _iconButton      = [[UIButton alloc] init];
-        UIImage *iconIMG = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"user_default@3x.png" ofType:nil]];
+        UIImage *iconIMG = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"userDefault.png" ofType:nil]];
         [_iconButton setImage:iconIMG forState:UIControlStateNormal];
         _iconButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.view addSubview:_iconButton];

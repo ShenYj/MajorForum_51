@@ -13,15 +13,18 @@ static CGFloat const kiPhoneXViewMargin_L = 0;
 static CGFloat const kiPhoneXViewMargin_R = 0;
 static CGFloat const kiPhoneXViewMargin_B = 0;
 
+static NSString * const kReusedID = @"kReusedID";
+
 /** 自定义导航条高度 */
 static CGFloat const kNavigationBarHeight = 44.f;
-//static CGFloat const kNavigationBarExtensionHeight = 88.f;
 
 /*** 背景色 ***/
 #define BackgroundColour [UIColor colorWithRed:245 / 255.0 green:245 / 255.0 blue:245 / 255.0 alpha:1.0]
 
 @interface JSBaseViewController ()
 
+/** 状态栏高度 */
+@property (nonatomic,assign,readwrite) CGRect statusBarRect;
 
 @end
 
@@ -31,6 +34,10 @@ static CGFloat const kNavigationBarHeight = 44.f;
     [super viewSafeAreaInsetsDidChange];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -38,32 +45,41 @@ static CGFloat const kNavigationBarHeight = 44.f;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        CGRect statusRect = [[UIApplication sharedApplication] statusBarFrame];
-        CGRect navRect    = self.navigationController.navigationBar.frame;
+        self.statusBarRect = [[UIApplication sharedApplication] statusBarFrame];
     }
     return self;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-#pragma mark - target
-
-- (void)goBackToParentController:(UIBarButtonItem *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self prepareCustomNavigationBar];
     // 设置视图
     [self setUpBaseView];
+    [self prepareCustomNavigationBar];
+    [self setUpTableView];
+    [self setUpView];
 }
 
+- (void)setUpView { }
+
 - (void)setUpBaseView {
-    [self prepareBaseView];
+    // 设置基类视图背景色
+    self.view.backgroundColor = BackgroundColour;
+    // 取消穿透
+    if (@available(iOS 11.0, *)) {
+        self.js_tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // Fallback on earlier versions
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+}
+
+- (void)setUpTableView {
+    [self.js_contentView addSubview:self.js_tableView];
+    [self.js_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.js_contentView).mas_offset(0);
+    }];
+    [self.js_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kReusedID];
 }
 
 /** 设置标题 */
@@ -86,7 +102,7 @@ static CGFloat const kNavigationBarHeight = 44.f;
                                  NSForegroundColorAttributeName: THEME_COLOUR
                                  };
     [self.js_NavigationBar setTitleTextAttributes: attributes];
-    self.js_contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.js_contentView.translatesAutoresizingMaskIntoConstraints   = NO;
     self.js_NavigationBar.translatesAutoresizingMaskIntoConstraints = NO;
 
     // navigationBar
@@ -159,21 +175,34 @@ static CGFloat const kNavigationBarHeight = 44.f;
                                                                         multiplier: 1
                                                                           constant: -contentViewBottomConstraint];
     [self.view addConstraint:contentViewBottom];
-
     // 返回按钮
     //self.js_navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.js_backButton];
 }
-/** 主视图 */
-- (void)prepareBaseView {
-    // 设置基类视图背景色
-    self.view.backgroundColor = BackgroundColour;
-    // 取消穿透
-    if (@available(iOS 11.0, *)) {
-        self.js_tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    } else {
-        // Fallback on earlier versions
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
+
+#pragma mark - target
+
+- (void)goBackToParentController:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - table view dataScoure
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [[UITableViewCell alloc] init];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
 }
 
 #pragma mark - lazy
@@ -201,7 +230,7 @@ static CGFloat const kNavigationBarHeight = 44.f;
 }
 - (UIButton *)js_backButton {
     if (!_js_backButton) {
-        _js_backButton = [[UIButton alloc] init];
+        _js_backButton       = [[UIButton alloc] init];
         _js_backButton.frame = CGRectMake(0, 0, 40, 40);
         _js_backButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
         [_js_backButton setBackgroundImage:[UIImage imageNamed:@"base_back"] forState:UIControlStateNormal];
@@ -212,6 +241,16 @@ static CGFloat const kNavigationBarHeight = 44.f;
                  forControlEvents: UIControlEventTouchUpInside];
     }
     return _js_backButton;
+}
+
+- (UITableView *)js_tableView {
+    if (!_js_tableView) {
+        _js_tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _js_tableView.dataSource = self;
+        _js_tableView.delegate   = self;
+        _js_tableView.backgroundColor = [UIColor whiteColor];
+    }
+    return _js_tableView;
 }
 
 @end

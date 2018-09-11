@@ -10,6 +10,6 @@
 
 @interface JSNetworkTool (JSComprehensiveInformation)
 
-- (void)getComprehensiveInformationNewDatasUrlString:(NSString *)urlString finishedBlock:(void (^)(id, NSError *error))finishedBlock;
+- (void)getComprehensiveInformationNewDatasFinishedBlock:(void (^)(id, NSError *error))finishedBlock;
 
 @end

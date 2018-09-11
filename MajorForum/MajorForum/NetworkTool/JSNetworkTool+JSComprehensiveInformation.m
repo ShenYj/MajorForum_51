@@ -12,7 +12,7 @@
 
 #pragma mark -- 请求首页最新数据
 
-- (void)getComprehensiveInformationNewDatasUrlString:(NSString *)urlString finishedBlock:(void (^)(id, NSError *error))finishedBlock {
+- (void)getComprehensiveInformationNewDatasFinishedBlock:(void (^)(id, NSError *error))finishedBlock {
     NSDictionary *parameters = @{
                                  @"r": @"forum/topiclist"
                                  };

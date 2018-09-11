@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JSNavigationBar.h"
 
-@interface JSBaseViewController : UIViewController
+@interface JSBaseViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 /** 自定义导航条 */
 @property (nonatomic,strong) JSNavigationBar  *js_NavigationBar;
@@ -21,5 +21,10 @@
 @property (nonatomic,strong) UIButton         *js_backButton;
 /** 表格控件 */
 @property (nonatomic,strong) UITableView      *js_tableView;
+/** 状态栏高度 */
+@property (nonatomic,assign,readonly) CGRect  statusBarRect;
+
+/** 子类实现用于自定义界面 */
+- (void)setUpView;
 
 @end

@@ -8,6 +8,13 @@
 
 #import "JSBaseViewController.h"
 
+typedef NS_ENUM(NSUInteger, ComprehensiveInformationType) {
+    ComprehensiveInformationTypeNewPosts,
+    ComprehensiveInformationTypeEssential,
+};
+
 @interface JSComprehensiveInformationVC_iPad : JSBaseViewController
+
+@property (nonatomic,assign) ComprehensiveInformationType ciType;
 
 @end

@@ -13,9 +13,13 @@
 
 #ifdef __OBJC__
 
+/** 真机or模拟器 */
+#if TARGET_IPHONE_SIMULATOR
+#else
+#endif
+/** LOG输出格式 */
 #ifdef DEBUG  // DEBUG模式
 #define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
-
 #else         // RELEASE模式
 #define NSLog(...)
 #endif
@@ -25,12 +29,22 @@
  头文件
  */
 #pragma mark - 头文件
+/** 约束 */
 #import "Masonry.h"
+/** 模型处理 */
 #import "JSBaseModel.h"
+#import <YYModel/YYModel.h>
+/** 图片处理 */
+#import <YYWebImage.h>
+#import "UIImageView+JS_IV.h"
+/** 网络处理 */
+#import "JSNetworkTool.h"
 #import "JSSplitController.h"
 #import "JSBaseViewController.h"
 #import <JSUIkitExtension.h>
 #import "JSPhoneTabBarController.h"
+
+#import "JSFormTopicCell.h"
 
 /**
  宏定义
@@ -70,9 +84,9 @@
 
 #ifdef DEBUG // 测试阶段
 // 登录
-static NSString * const longinUrlString = @"http://forum.51nb.com/mobcent/app/web/index.php?r=user/login";
+static NSString * const longinUrlString = @"https://forum.51nb.com/mobcent/app/web/index.php?r=user/login";
 // 最新
-static NSString * const HomePageNewTopicsUrlString = @"http://forum.51nb.com/mobcent/app/web/index.php?r=forum/topiclist";
+static NSString * const HomePageNewTopicsUrlString = @"https://forum.51nb.com/mobcent/app/web/index.php?r=forum/topiclist";
 
 
 #else // 发布阶段

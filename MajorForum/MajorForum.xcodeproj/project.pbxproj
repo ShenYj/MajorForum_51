@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6897BE1F2147435A00CCF7F6 /* JSRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897BE1B2147435A00CCF7F6 /* JSRefreshAutoFooter.m */; };
+		6897BE202147435A00CCF7F6 /* JSRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897BE1D2147435A00CCF7F6 /* JSRefreshNormalHeader.m */; };
+		6897BE2421475C9D00CCF7F6 /* JSForumSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897BE2321475C9D00CCF7F6 /* JSForumSection.m */; };
+		6897BE2721476F4700CCF7F6 /* JSFormTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897BE2621476F4700CCF7F6 /* JSFormTopic.m */; };
+		6897BE2C2147719E00CCF7F6 /* JSFormTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897BE2B2147719E00CCF7F6 /* JSFormTopicCell.m */; };
+		6897BE302147798100CCF7F6 /* JSFormTopicContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897BE2F2147798100CCF7F6 /* JSFormTopicContentView.m */; };
+		6897BE3421477ACB00CCF7F6 /* UIImageView+JS_IV.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897BE3321477ACB00CCF7F6 /* UIImageView+JS_IV.m */; };
+		6897BE372147947400CCF7F6 /* JSFormTopicStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897BE362147947400CCF7F6 /* JSFormTopicStatusBarView.m */; };
+		6897BE3A214796B000CCF7F6 /* JSFormTopicStatusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897BE39214796B000CCF7F6 /* JSFormTopicStatusButton.m */; };
+		6897BE3E2147A88100CCF7F6 /* userDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6897BE3B2147A88100CCF7F6 /* userDefault@2x.png */; };
+		6897BE3F2147A88100CCF7F6 /* userDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 6897BE3C2147A88100CCF7F6 /* userDefault.png */; };
+		6897BE402147A88200CCF7F6 /* userDefault@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6897BE3D2147A88100CCF7F6 /* userDefault@3x.png */; };
 		68F29FF02146738B00F24AAF /* JSBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F29FEF2146738B00F24AAF /* JSBaseModel.m */; };
 		68F29FF3214674DF00F24AAF /* JSMasterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F29FF2214674DF00F24AAF /* JSMasterItem.m */; };
 		68F29FF62146752400F24AAF /* JSMasterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F29FF52146752400F24AAF /* JSMasterButton.m */; };
@@ -25,7 +37,6 @@
 		F7CEC15D214538B300BAC9E2 /* JSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC142214538B300BAC9E2 /* JSDetailViewController.m */; };
 		F7CEC15E214538B300BAC9E2 /* JSSplitController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC143214538B300BAC9E2 /* JSSplitController.m */; };
 		F7CEC1702145492100BAC9E2 /* JSPhoneTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC16F2145492100BAC9E2 /* JSPhoneTabBarController.m */; };
-		F7CEC175214694AC00BAC9E2 /* user_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7CEC174214694AC00BAC9E2 /* user_default@3x.png */; };
 		F7CEC1792146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC1782146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m */; };
 		F7CEC17E2146B28700BAC9E2 /* JSBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC17C2146B28700BAC9E2 /* JSBaseNavigationController.m */; };
 		F7CEC17F2146B28700BAC9E2 /* JSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CEC17D2146B28700BAC9E2 /* JSBaseViewController.m */; };
@@ -55,6 +66,27 @@
 		2F38730FCAFD524D983EB493 /* Pods-MajorForum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajorForum.release.xcconfig"; path = "Pods/Target Support Files/Pods-MajorForum/Pods-MajorForum.release.xcconfig"; sourceTree = "<group>"; };
 		4EBD13C8DE89C602A126EA27 /* Pods-MajorForum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajorForum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MajorForum/Pods-MajorForum.debug.xcconfig"; sourceTree = "<group>"; };
 		63DF7F142A4F1F23C80CDEAD /* Pods-MajorForumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajorForumUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MajorForumUITests/Pods-MajorForumUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6897BE1B2147435A00CCF7F6 /* JSRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRefreshAutoFooter.m; sourceTree = "<group>"; };
+		6897BE1C2147435A00CCF7F6 /* JSRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRefreshAutoFooter.h; sourceTree = "<group>"; };
+		6897BE1D2147435A00CCF7F6 /* JSRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRefreshNormalHeader.m; sourceTree = "<group>"; };
+		6897BE1E2147435A00CCF7F6 /* JSRefreshNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRefreshNormalHeader.h; sourceTree = "<group>"; };
+		6897BE2221475C9D00CCF7F6 /* JSForumSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSForumSection.h; sourceTree = "<group>"; };
+		6897BE2321475C9D00CCF7F6 /* JSForumSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSForumSection.m; sourceTree = "<group>"; };
+		6897BE2521476F4700CCF7F6 /* JSFormTopic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSFormTopic.h; sourceTree = "<group>"; };
+		6897BE2621476F4700CCF7F6 /* JSFormTopic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFormTopic.m; sourceTree = "<group>"; };
+		6897BE2A2147719E00CCF7F6 /* JSFormTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSFormTopicCell.h; sourceTree = "<group>"; };
+		6897BE2B2147719E00CCF7F6 /* JSFormTopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFormTopicCell.m; sourceTree = "<group>"; };
+		6897BE2E2147798100CCF7F6 /* JSFormTopicContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSFormTopicContentView.h; sourceTree = "<group>"; };
+		6897BE2F2147798100CCF7F6 /* JSFormTopicContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFormTopicContentView.m; sourceTree = "<group>"; };
+		6897BE3221477ACB00CCF7F6 /* UIImageView+JS_IV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JS_IV.h"; sourceTree = "<group>"; };
+		6897BE3321477ACB00CCF7F6 /* UIImageView+JS_IV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JS_IV.m"; sourceTree = "<group>"; };
+		6897BE352147947400CCF7F6 /* JSFormTopicStatusBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSFormTopicStatusBarView.h; sourceTree = "<group>"; };
+		6897BE362147947400CCF7F6 /* JSFormTopicStatusBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFormTopicStatusBarView.m; sourceTree = "<group>"; };
+		6897BE38214796B000CCF7F6 /* JSFormTopicStatusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSFormTopicStatusButton.h; sourceTree = "<group>"; };
+		6897BE39214796B000CCF7F6 /* JSFormTopicStatusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFormTopicStatusButton.m; sourceTree = "<group>"; };
+		6897BE3B2147A88100CCF7F6 /* userDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userDefault@2x.png"; sourceTree = "<group>"; };
+		6897BE3C2147A88100CCF7F6 /* userDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userDefault.png; sourceTree = "<group>"; };
+		6897BE3D2147A88100CCF7F6 /* userDefault@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userDefault@3x.png"; sourceTree = "<group>"; };
 		68F29FEE2146738B00F24AAF /* JSBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSBaseModel.h; sourceTree = "<group>"; };
 		68F29FEF2146738B00F24AAF /* JSBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSBaseModel.m; sourceTree = "<group>"; };
 		68F29FF1214674DF00F24AAF /* JSMasterItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMasterItem.h; sourceTree = "<group>"; };
@@ -92,7 +124,6 @@
 		F7CEC143214538B300BAC9E2 /* JSSplitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSplitController.m; sourceTree = "<group>"; };
 		F7CEC16E2145492100BAC9E2 /* JSPhoneTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSPhoneTabBarController.h; sourceTree = "<group>"; };
 		F7CEC16F2145492100BAC9E2 /* JSPhoneTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSPhoneTabBarController.m; sourceTree = "<group>"; };
-		F7CEC174214694AC00BAC9E2 /* user_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_default@3x.png"; sourceTree = "<group>"; };
 		F7CEC1772146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSComprehensiveInformationVC_iPad.h; sourceTree = "<group>"; };
 		F7CEC1782146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSComprehensiveInformationVC_iPad.m; sourceTree = "<group>"; };
 		F7CEC17A2146B28700BAC9E2 /* JSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseViewController.h; sourceTree = "<group>"; };
@@ -158,6 +189,68 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6897BE1A2147425F00CCF7F6 /* RefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				6897BE1E2147435A00CCF7F6 /* JSRefreshNormalHeader.h */,
+				6897BE1D2147435A00CCF7F6 /* JSRefreshNormalHeader.m */,
+				6897BE1C2147435A00CCF7F6 /* JSRefreshAutoFooter.h */,
+				6897BE1B2147435A00CCF7F6 /* JSRefreshAutoFooter.m */,
+			);
+			path = RefreshControl;
+			sourceTree = "<group>";
+		};
+		6897BE2121475C0200CCF7F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6897BE2221475C9D00CCF7F6 /* JSForumSection.h */,
+				6897BE2321475C9D00CCF7F6 /* JSForumSection.m */,
+				6897BE2521476F4700CCF7F6 /* JSFormTopic.h */,
+				6897BE2621476F4700CCF7F6 /* JSFormTopic.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6897BE282147715D00CCF7F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6897BE2D214778B700CCF7F6 /* 自定义Views */,
+				6897BE292147717000CCF7F6 /* 自定义Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6897BE292147717000CCF7F6 /* 自定义Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6897BE2A2147719E00CCF7F6 /* JSFormTopicCell.h */,
+				6897BE2B2147719E00CCF7F6 /* JSFormTopicCell.m */,
+			);
+			path = "自定义Cells";
+			sourceTree = "<group>";
+		};
+		6897BE2D214778B700CCF7F6 /* 自定义Views */ = {
+			isa = PBXGroup;
+			children = (
+				6897BE2E2147798100CCF7F6 /* JSFormTopicContentView.h */,
+				6897BE2F2147798100CCF7F6 /* JSFormTopicContentView.m */,
+				6897BE352147947400CCF7F6 /* JSFormTopicStatusBarView.h */,
+				6897BE362147947400CCF7F6 /* JSFormTopicStatusBarView.m */,
+				6897BE38214796B000CCF7F6 /* JSFormTopicStatusButton.h */,
+				6897BE39214796B000CCF7F6 /* JSFormTopicStatusButton.m */,
+			);
+			path = "自定义Views";
+			sourceTree = "<group>";
+		};
+		6897BE3121477A9700CCF7F6 /* IMGTool */ = {
+			isa = PBXGroup;
+			children = (
+				6897BE3221477ACB00CCF7F6 /* UIImageView+JS_IV.h */,
+				6897BE3321477ACB00CCF7F6 /* UIImageView+JS_IV.m */,
+			);
+			path = IMGTool;
+			sourceTree = "<group>";
+		};
 		68F29FED2146736800F24AAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,11 +298,14 @@
 		F7CEC0F52144C44B00BAC9E2 /* MajorForum */ = {
 			isa = PBXGroup;
 			children = (
+				6897BE3121477A9700CCF7F6 /* IMGTool */,
+				6897BE1A2147425F00CCF7F6 /* RefreshControl */,
 				F7CEC1802146B54100BAC9E2 /* NetworkTool */,
 				F7CEC1712146933700BAC9E2 /* Sources */,
 				F7CEC1362144C56100BAC9E2 /* 主框架 */,
 				F7CEC16A2145465600BAC9E2 /* Controllers */,
-				F7CEC16D2145468400BAC9E2 /* Views */,
+				6897BE2121475C0200CCF7F6 /* Models */,
+				6897BE282147715D00CCF7F6 /* Views */,
 				F7CEC1282144C55300BAC9E2 /* SupportingFiles */,
 			);
 			path = MajorForum;
@@ -309,17 +405,12 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		F7CEC16D2145468400BAC9E2 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		F7CEC1712146933700BAC9E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F7CEC174214694AC00BAC9E2 /* user_default@3x.png */,
+				6897BE3C2147A88100CCF7F6 /* userDefault.png */,
+				6897BE3B2147A88100CCF7F6 /* userDefault@2x.png */,
+				6897BE3D2147A88100CCF7F6 /* userDefault@3x.png */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -459,7 +550,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7CEC175214694AC00BAC9E2 /* user_default@3x.png in Resources */,
+				6897BE3F2147A88100CCF7F6 /* userDefault.png in Resources */,
+				6897BE3E2147A88100CCF7F6 /* userDefault@2x.png in Resources */,
+				6897BE402147A88200CCF7F6 /* userDefault@3x.png in Resources */,
 				F7CEC1032144C44C00BAC9E2 /* LaunchScreen.storyboard in Resources */,
 				F7CEC1312144C55300BAC9E2 /* Assets.xcassets in Resources */,
 				F7CEC0FE2144C44B00BAC9E2 /* Main.storyboard in Resources */,
@@ -637,17 +730,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6897BE2721476F4700CCF7F6 /* JSFormTopic.m in Sources */,
+				6897BE372147947400CCF7F6 /* JSFormTopicStatusBarView.m in Sources */,
+				6897BE1F2147435A00CCF7F6 /* JSRefreshAutoFooter.m in Sources */,
 				F7CEC1892146B7CC00BAC9E2 /* JSNetworkTool+JSComprehensiveInformation.m in Sources */,
 				68F29FF62146752400F24AAF /* JSMasterButton.m in Sources */,
+				6897BE2C2147719E00CCF7F6 /* JSFormTopicCell.m in Sources */,
 				68F29FF3214674DF00F24AAF /* JSMasterItem.m in Sources */,
 				F7CEC1352144C55300BAC9E2 /* AppDelegate.m in Sources */,
+				6897BE2421475C9D00CCF7F6 /* JSForumSection.m in Sources */,
 				F7CEC17E2146B28700BAC9E2 /* JSBaseNavigationController.m in Sources */,
+				6897BE3A214796B000CCF7F6 /* JSFormTopicStatusButton.m in Sources */,
 				F7CEC17F2146B28700BAC9E2 /* JSBaseViewController.m in Sources */,
 				F7CEC1832146B56500BAC9E2 /* JSNetworkTool.m in Sources */,
 				F7CEC15C214538B300BAC9E2 /* JSMasterViewController.m in Sources */,
 				F7CEC1862146B6AA00BAC9E2 /* JSNetworkTool+JSOAuth.m in Sources */,
+				6897BE302147798100CCF7F6 /* JSFormTopicContentView.m in Sources */,
 				68FF2F0C214646D20045CF51 /* JSNavigationBar.m in Sources */,
 				F7CEC1792146B11F00BAC9E2 /* JSComprehensiveInformationVC_iPad.m in Sources */,
+				6897BE202147435A00CCF7F6 /* JSRefreshNormalHeader.m in Sources */,
+				6897BE3421477ACB00CCF7F6 /* UIImageView+JS_IV.m in Sources */,
 				F7CEC1702145492100BAC9E2 /* JSPhoneTabBarController.m in Sources */,
 				68F29FF02146738B00F24AAF /* JSBaseModel.m in Sources */,
 				F7CEC15E214538B300BAC9E2 /* JSSplitController.m in Sources */,
