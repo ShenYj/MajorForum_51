@@ -20,20 +20,26 @@ static NSString * const kComprehensiveInformationVCCellReusedID = @"kComprehensi
 /** 精华 */
 @property (nonatomic,strong) NSArray <JSFormTopic *> *EssentialTopicDatas;
 
+/** 页码 */
+@property (nonatomic,assign) NSInteger pageIdx;
+
+
+
 @end
 
 @implementation JSComprehensiveInformationVC_iPad
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.ciType = ComprehensiveInformationTypeNewPosts;
-    [self loadComprehensiveInformationNewDatas:YES];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.pageIdx = 1;
+    //[self loadComprehensiveInformationNewDatas:YES];
 }
 
 - (void)headerWithRefreshingTarget {
@@ -45,40 +51,60 @@ static NSString * const kComprehensiveInformationVCCellReusedID = @"kComprehensi
 
 /** 请求新帖数据 */
 - (void)loadComprehensiveInformationNewDatas:(BOOL)flag {
-    if (flag) {
-        [[JSNetworkTool sharedNetworkToolManager] getComprehensiveInformationNewDatasFinishedBlock:^(id obj, NSError *error) {
-            if (error != nil || obj == nil) {
-                NSLog(@"请求失败-->!%@",error);
-                [self endRefresh];
-                return ;
-            }
-            NSLog(@"%@", obj);
-            NSArray *list = obj[@"list"];
-            if ( !list ) {
-                NSLog(@"数据异常");
-                return;
-            }
-            if (list.count == 0) {
-                NSLog(@"返回空");
-                
-            }
-            NSMutableArray *tempArr = [NSMutableArray arrayWithArray:self.NewTopicDatas];
-            [list enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                @autoreleasepool {
-                    JSFormTopic *model = [JSFormTopic yy_modelWithDictionary:obj];
-                    if (![tempArr containsObject:model]) {
-                        [tempArr insertObject:model atIndex:0];
-                    }
-                }
-            }];
-            self.NewTopicDatas = tempArr.copy;
-            [self.js_tableView reloadData];
-            [self endRefresh];
-        }];
+    
+    if (self.isLoading) {
+        NSLog(@"正在加载数据中....");
         return;
     }
-    // 上拉
-    [self endRefresh];
+    if (flag) {
+        self.pageIdx = 1;   // 下拉加载新帖
+    } else {
+        self.pageIdx++;     // 上拉加载更多
+    }
+    self.isLoading = YES;
+    
+    [[JSNetworkTool sharedNetworkToolManager] getComprehensiveInformationNewDatas:self.pageIdx FinishedBlock:^(id obj, NSError *error) {
+        if (error != nil || obj == nil) {
+            NSLog(@"请求失败-->!%@",error);
+            [self endRefresh];
+            return ;
+        }
+        NSLog(@"%@", [obj class]);
+        NSArray *list = obj[@"list"];
+        if ( !list ) {
+            NSLog(@"数据异常");
+            [self endRefresh];
+            return;
+        }
+        if (list.count == 0) {
+            NSLog(@"返回空");
+            self.pageIdx--;
+            [self endRefresh];
+            return;
+        }
+        NSMutableArray *tempArr = [NSMutableArray arrayWithArray:self.NewTopicDatas];
+        if (flag) {
+            // 下拉插入前端
+            [list enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                JSFormTopic *model = [JSFormTopic yy_modelWithDictionary:obj];
+                if (![self.NewTopicDatas containsObject:model]) NSLog(@"不包含: %@",model.topic_id);
+                if (![tempArr containsObject:model]) [tempArr insertObject:model atIndex:0];
+                @autoreleasepool {
+                }
+            }];
+        } else {
+            // 上拉加载后面
+            [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                @autoreleasepool {
+                    JSFormTopic *model = [JSFormTopic yy_modelWithDictionary:obj];
+                    if (![self.NewTopicDatas containsObject:model]) [tempArr addObject:model];
+                }
+            }];
+        }
+        self.NewTopicDatas = tempArr.copy;
+        [self.js_tableView reloadData];
+        [self endRefresh];
+    }];
 }
 /** 请求精华数据 */
 - (void)loadComprehensiveInformationEssentialDatas:(BOOL)flag {

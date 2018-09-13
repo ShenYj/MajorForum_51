@@ -86,7 +86,7 @@
 // 登录
 static NSString * const longinUrlString = @"https://forum.51nb.com/mobcent/app/web/index.php?r=user/login";
 // 最新
-static NSString * const HomePageNewTopicsUrlString = @"https://forum.51nb.com/mobcent/app/web/index.php?r=forum/topiclist";
+static NSString * const HomePageNewTopicsUrlString = @"https://forum.51nb.com/mobcent/app/web/index.php?r=forum/topiclist";//@"https://forum.51nb.com/forum.php?mod=guide&view=new";
 
 
 #else // 发布阶段

@@ -23,6 +23,8 @@
 @property (nonatomic,strong) UITableView      *js_tableView;
 /** 状态栏高度 */
 @property (nonatomic,assign,readonly) CGRect  statusBarRect;
+/** 请求标记 */
+@property (nonatomic,assign) BOOL             isLoading;
 
 /** 子类实现用于自定义界面 */
 - (void)setUpView;

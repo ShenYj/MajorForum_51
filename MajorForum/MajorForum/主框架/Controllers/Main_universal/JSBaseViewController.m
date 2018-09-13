@@ -67,6 +67,7 @@ static CGFloat const kNavigationBarHeight = 44.f;
 - (void)setUpBaseView {
     // 设置基类视图背景色
     self.view.backgroundColor = BackgroundColour;
+    self.isLoading = NO;
     // 取消穿透
     if (@available(iOS 11.0, *)) {
         self.js_tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
@@ -82,6 +83,7 @@ static CGFloat const kNavigationBarHeight = 44.f;
 - (void)footerWithRefreshingTarget {}
 
 - (void)endRefresh {
+    self.isLoading = NO;
     [self.js_tableView.mj_header endRefreshing];
     [self.js_tableView.mj_footer endRefreshing];
 }
