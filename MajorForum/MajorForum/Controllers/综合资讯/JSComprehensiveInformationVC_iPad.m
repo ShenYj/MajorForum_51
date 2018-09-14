@@ -69,7 +69,7 @@ static NSString * const kComprehensiveInformationVCCellReusedID = @"kComprehensi
             [self endRefresh];
             return ;
         }
-        NSLog(@"%@", [obj class]);
+        //NSLog(@"%@", obj);
         NSArray *list = obj[@"list"];
         if ( !list ) {
             NSLog(@"数据异常");
@@ -87,9 +87,13 @@ static NSString * const kComprehensiveInformationVCCellReusedID = @"kComprehensi
             // 下拉插入前端
             [list enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 JSFormTopic *model = [JSFormTopic yy_modelWithDictionary:obj];
-                if (![self.NewTopicDatas containsObject:model]) NSLog(@"不包含: %@",model.topic_id);
-                if (![tempArr containsObject:model]) [tempArr insertObject:model atIndex:0];
-                @autoreleasepool {
+                if ([tempArr containsObject:model]) {
+                    [tempArr insertObject:model atIndex:idx];
+                    [tempArr removeObjectAtIndex:idx + 1];
+                    //NSLog(@"替换新帖ID: %@",model.topic_id.stringValue);
+                } else {
+                    [tempArr insertObject:model atIndex:0];
+                    //NSLog(@"插入新帖: %@",model.topic_id.stringValue);
                 }
             }];
         } else {
