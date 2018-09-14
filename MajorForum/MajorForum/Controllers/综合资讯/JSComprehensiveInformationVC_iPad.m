@@ -65,11 +65,14 @@ static NSString * const kComprehensiveInformationVCCellReusedID = @"kComprehensi
     
     [[JSNetworkTool sharedNetworkToolManager] getComprehensiveInformationNewDatas:self.pageIdx FinishedBlock:^(id obj, NSError *error) {
         if (error != nil || obj == nil) {
-            NSLog(@"请求失败-->!%@",error);
+            NSLog(@"请求失败--> %@",error);
             [self endRefresh];
             return ;
         }
-        //NSLog(@"%@", obj);
+//        NSError *err = nil;
+//        id object = [NSJSONSerialization JSONObjectWithData:obj options:NSJSONReadingMutableContainers error:&err];
+//        NSLog(@"%@", [object class]);
+        
         NSArray *list = obj[@"list"];
         if ( !list ) {
             NSLog(@"数据异常");

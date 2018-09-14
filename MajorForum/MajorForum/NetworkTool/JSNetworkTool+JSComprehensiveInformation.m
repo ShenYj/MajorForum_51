@@ -21,10 +21,10 @@
 //    An SSL error has occurred and a secure connection to the server cannot be made
 //    https://forum.51nb.com/forum.php?mod=guide&view=new
     NSDictionary *parameters = @{
-                                 @"r": @"forum/topiclist",
+//                                 @"r": @"forum/topiclist",
 //                                 @"mod":@"guide",
 //                                 @"view":@"new",
-                                 @"page": @(pageIdx).stringValue
+//                                 @"page": @(pageIdx).stringValue
                                  };
     
     [self requestUrlString:HomePageNewTopicsUrlString withRequestMethod:RequestModeGet withParameters:parameters progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
