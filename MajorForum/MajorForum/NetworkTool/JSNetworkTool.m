@@ -17,7 +17,8 @@ static JSNetworkTool *_instanceType = nil;
     dispatch_once(&onceToken, ^{
         _instanceType = [[JSNetworkTool alloc] init];
         _instanceType.responseSerializer.acceptableContentTypes = [_instanceType.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-        _instanceType.responseSerializer = [AFHTTPResponseSerializer serializer];
+        _instanceType.requestSerializer  = [AFHTTPRequestSerializer serializer];
+        _instanceType.responseSerializer = [AFJSONResponseSerializer serializer];
         AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
         securityPolicy.validatesDomainName = NO;
         securityPolicy.allowInvalidCertificates = YES;
