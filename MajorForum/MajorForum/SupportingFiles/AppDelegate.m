@@ -25,6 +25,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 阿里SDK注册
+    [[ALBBMANAnalytics getInstance] autoInit];
+    
     self.window = [[UIWindow alloc] initWithFrame:SCREEN_BOUNDS];
     if (IS_IPHONE) {
         JSPhoneTabBarController *tabBarController = [[JSPhoneTabBarController alloc] init];

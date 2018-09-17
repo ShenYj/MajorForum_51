@@ -110,6 +110,7 @@ static CGFloat const kNavigationBarHeight = 44.f;
 
     self.js_NavigationBar.items        = @[self.js_navigationItem];
     self.js_NavigationBar.barTintColor = BackgroundColour;
+    self.js_NavigationBar.tintColor    = THEME_COLOUR;
     
     NSDictionary *attributes = @{
                                  NSFontAttributeName: [UIFont systemFontOfSize:18],

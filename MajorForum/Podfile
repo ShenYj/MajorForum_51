@@ -1,4 +1,7 @@
 # Uncomment the next line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/aliyun/aliyun-specs.git'
+
 platform :ios, '9.0'
 
 target 'MajorForum' do
@@ -13,6 +16,7 @@ pod 'MJRefresh'
 pod 'AFNetworking'
 pod 'MBProgressHUD'
 pod 'JSExtension'
+pod 'AlicloudMAN'
 
   target 'MajorForumTests' do
     inherit! :search_paths

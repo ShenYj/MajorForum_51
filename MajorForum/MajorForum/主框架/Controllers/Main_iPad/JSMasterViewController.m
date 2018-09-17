@@ -8,6 +8,7 @@
 
 #import "JSMasterViewController.h"
 #import "JSDetailViewController.h"
+#import "JSPersonalInformationVC.h"
 #import "JSMasterItem.h"
 #import "JSMasterButton.h"
 
@@ -88,11 +89,11 @@
         make.top.mas_equalTo(self.view).mas_offset(20);
         // 设置左侧间距  利用水平居中的特性在竖屏时对头像视图进行压缩
         // 大于等于边距  既可以保证右侧间距也大于等于5(竖屏时会进行压缩),同时对横向宽度并不是具体值,这样autolayout就会根据固有尺寸设置button的宽高
-        make.left.mas_greaterThanOrEqualTo(5);
+        make.left.mas_greaterThanOrEqualTo(5).priorityHigh();
         // 水平间距
-        make.centerX.mas_equalTo(self.view);
+        make.centerX.mas_equalTo(self.view).priorityHigh();
         // 高度=宽度
-        make.height.mas_equalTo(self.iconButton.mas_width);
+        make.height.mas_equalTo(self.iconButton.mas_width).priorityHigh();
     }];
 }
 
@@ -129,8 +130,8 @@
         self.composeArea_StackView.axis = UILayoutConstraintAxisVertical;
         // 更新撰写区约束
         [self.composeArea_StackView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.height.mas_equalTo(self.composeArea_StackView.subviews.count * kMenumButtonPortraitHeight);
-            make.bottom.mas_equalTo(self.view).mas_offset(-30);
+            make.height.mas_equalTo(self.composeArea_StackView.subviews.count * kMenumButtonPortraitHeight).priorityHigh();
+            make.bottom.mas_equalTo(self.view).mas_offset(-30).priorityHigh();
         }];
         // 设置昵称
         self.nameLabel.text = @"";
@@ -138,8 +139,8 @@
         // 横屏
         self.composeArea_StackView.axis = UILayoutConstraintAxisHorizontal;
         [self.composeArea_StackView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.height.mas_equalTo(kMenumButtonLandScapeHeight);
-            make.bottom.mas_equalTo(self.view);
+            make.height.mas_equalTo(kMenumButtonLandScapeHeight).priorityHigh();
+            make.bottom.mas_equalTo(self.view).priorityHigh();
         }];
         // 设置昵称
         self.nameLabel.text = @"一只耳";
@@ -206,6 +207,12 @@
     //    [self.splitViewController showViewController:detail sender:self.splitViewController.viewControllers[1]];
 }
 
+- (void)clickIconButton:(UIButton *)btn {
+    JSPersonalInformationVC *personalInfoVC = [[JSPersonalInformationVC alloc] init];
+    personalInfoVC.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self presentViewController:personalInfoVC animated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -213,16 +220,14 @@
 
 #pragma mark -- lazy
 
-#pragma mark -- 懒加载
-
 - (UIStackView *)composeArea_StackView {
     if (_composeArea_StackView == nil) {
         _composeArea_StackView = [[UIStackView alloc] init];
         [self.view addSubview:_composeArea_StackView];
         self.composeArea_StackView.distribution = UIStackViewDistributionFillEqually;
         [self.composeArea_StackView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.left.right.mas_equalTo(self.view);
-            make.height.mas_equalTo(kMenumButtonLandScapeHeight);
+            make.bottom.left.right.mas_equalTo(self.view).priorityHigh();
+            make.height.mas_equalTo(kMenumButtonLandScapeHeight).priorityHigh();
         }];
     }
     return _composeArea_StackView;
@@ -235,8 +240,8 @@
         // 设置为垂直排列
         self.menuArea_StackView.axis = UILayoutConstraintAxisVertical;
         [self.menuArea_StackView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.mas_equalTo(self.composeArea_StackView.mas_top);
-            make.left.right.mas_equalTo(self.view);
+            make.bottom.mas_equalTo(self.composeArea_StackView.mas_top).priorityHigh();
+            make.left.right.mas_equalTo(self.view).priorityHigh();
         }];
     }
     return _menuArea_StackView;
@@ -248,6 +253,7 @@
         UIImage *iconIMG = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"userDefault.png" ofType:nil]];
         [_iconButton setImage:iconIMG forState:UIControlStateNormal];
         _iconButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [_iconButton addTarget:self action:@selector(clickIconButton:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_iconButton];
     }
     return _iconButton;

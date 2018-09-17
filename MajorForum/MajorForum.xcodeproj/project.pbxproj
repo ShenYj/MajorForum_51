@@ -19,6 +19,17 @@
 		6897BE3E2147A88100CCF7F6 /* userDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6897BE3B2147A88100CCF7F6 /* userDefault@2x.png */; };
 		6897BE3F2147A88100CCF7F6 /* userDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 6897BE3C2147A88100CCF7F6 /* userDefault.png */; };
 		6897BE402147A88200CCF7F6 /* userDefault@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6897BE3D2147A88100CCF7F6 /* userDefault@3x.png */; };
+		68A7A7A5214F537600808CFB /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68A7A7A4214F537600808CFB /* AliyunEmasServices-Info.plist */; };
+		68A7A7A9214F54CF00808CFB /* UIViewController+JSAnalysis.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A7A7A8214F54CF00808CFB /* UIViewController+JSAnalysis.m */; };
+		68A7A7AB214F588900808CFB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A7A7AA214F588900808CFB /* libz.tbd */; };
+		68A7A7AD214F589600808CFB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A7A7AC214F589600808CFB /* libresolv.tbd */; };
+		68A7A7AF214F58A000808CFB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A7A7AE214F58A000808CFB /* libsqlite3.tbd */; };
+		68A7A7B1214F58A900808CFB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A7A7B0214F58A900808CFB /* CoreTelephony.framework */; };
+		68A7A7B3214F58B200808CFB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A7A7B2214F58B100808CFB /* SystemConfiguration.framework */; };
+		68A7A7B6214F61BD00808CFB /* JSALBBTrackerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A7A7B5214F61BD00808CFB /* JSALBBTrackerTool.m */; };
+		68A7A7B8214F631200808CFB /* PageNameRelation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68A7A7B7214F631200808CFB /* PageNameRelation.plist */; };
+		68A7A7BC214F8A1C00808CFB /* JSPersonalInformationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A7A7BB214F8A1C00808CFB /* JSPersonalInformationVC.m */; };
+		68A7A7BE214F952B00808CFB /* close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68A7A7BD214F952A00808CFB /* close@3x.png */; };
 		68F29FF02146738B00F24AAF /* JSBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F29FEF2146738B00F24AAF /* JSBaseModel.m */; };
 		68F29FF3214674DF00F24AAF /* JSMasterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F29FF2214674DF00F24AAF /* JSMasterItem.m */; };
 		68F29FF62146752400F24AAF /* JSMasterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F29FF52146752400F24AAF /* JSMasterButton.m */; };
@@ -87,6 +98,20 @@
 		6897BE3B2147A88100CCF7F6 /* userDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userDefault@2x.png"; sourceTree = "<group>"; };
 		6897BE3C2147A88100CCF7F6 /* userDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userDefault.png; sourceTree = "<group>"; };
 		6897BE3D2147A88100CCF7F6 /* userDefault@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userDefault@3x.png"; sourceTree = "<group>"; };
+		68A7A7A4214F537600808CFB /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
+		68A7A7A7214F54CF00808CFB /* UIViewController+JSAnalysis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JSAnalysis.h"; sourceTree = "<group>"; };
+		68A7A7A8214F54CF00808CFB /* UIViewController+JSAnalysis.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JSAnalysis.m"; sourceTree = "<group>"; };
+		68A7A7AA214F588900808CFB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		68A7A7AC214F589600808CFB /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		68A7A7AE214F58A000808CFB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		68A7A7B0214F58A900808CFB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		68A7A7B2214F58B100808CFB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		68A7A7B4214F61BD00808CFB /* JSALBBTrackerTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSALBBTrackerTool.h; sourceTree = "<group>"; };
+		68A7A7B5214F61BD00808CFB /* JSALBBTrackerTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSALBBTrackerTool.m; sourceTree = "<group>"; };
+		68A7A7B7214F631200808CFB /* PageNameRelation.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PageNameRelation.plist; sourceTree = "<group>"; };
+		68A7A7BA214F8A1C00808CFB /* JSPersonalInformationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSPersonalInformationVC.h; sourceTree = "<group>"; };
+		68A7A7BB214F8A1C00808CFB /* JSPersonalInformationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSPersonalInformationVC.m; sourceTree = "<group>"; };
+		68A7A7BD214F952A00808CFB /* close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@3x.png"; sourceTree = "<group>"; };
 		68F29FEE2146738B00F24AAF /* JSBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSBaseModel.h; sourceTree = "<group>"; };
 		68F29FEF2146738B00F24AAF /* JSBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSBaseModel.m; sourceTree = "<group>"; };
 		68F29FF1214674DF00F24AAF /* JSMasterItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMasterItem.h; sourceTree = "<group>"; };
@@ -143,6 +168,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A7A7B3214F58B200808CFB /* SystemConfiguration.framework in Frameworks */,
+				68A7A7B1214F58A900808CFB /* CoreTelephony.framework in Frameworks */,
+				68A7A7AF214F58A000808CFB /* libsqlite3.tbd in Frameworks */,
+				68A7A7AD214F589600808CFB /* libresolv.tbd in Frameworks */,
+				68A7A7AB214F588900808CFB /* libz.tbd in Frameworks */,
 				D53C0C53928FBD7F57234B7A /* libPods-MajorForum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +199,11 @@
 		48E1B94A9B83C8246950D586 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68A7A7B2214F58B100808CFB /* SystemConfiguration.framework */,
+				68A7A7B0214F58A900808CFB /* CoreTelephony.framework */,
+				68A7A7AE214F58A000808CFB /* libsqlite3.tbd */,
+				68A7A7AC214F589600808CFB /* libresolv.tbd */,
+				68A7A7AA214F588900808CFB /* libz.tbd */,
 				B3DBCB3A5EF54E2570D596DA /* libPods-MajorForum.a */,
 				6D5DB5CA9B1BFFC1383F25D7 /* libPods-MajorForumTests.a */,
 				F1707D2B9477983B3F8CC307 /* libPods-MajorForumUITests.a */,
@@ -251,6 +286,27 @@
 			path = IMGTool;
 			sourceTree = "<group>";
 		};
+		68A7A7A6214F54AC00808CFB /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				68A7A7B4214F61BD00808CFB /* JSALBBTrackerTool.h */,
+				68A7A7B5214F61BD00808CFB /* JSALBBTrackerTool.m */,
+				68A7A7A7214F54CF00808CFB /* UIViewController+JSAnalysis.h */,
+				68A7A7A8214F54CF00808CFB /* UIViewController+JSAnalysis.m */,
+				68A7A7B7214F631200808CFB /* PageNameRelation.plist */,
+			);
+			path = Analysis;
+			sourceTree = "<group>";
+		};
+		68A7A7B9214F89E200808CFB /* 个人信息 */ = {
+			isa = PBXGroup;
+			children = (
+				68A7A7BA214F8A1C00808CFB /* JSPersonalInformationVC.h */,
+				68A7A7BB214F8A1C00808CFB /* JSPersonalInformationVC.m */,
+			);
+			path = "个人信息";
+			sourceTree = "<group>";
+		};
 		68F29FED2146736800F24AAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +354,7 @@
 		F7CEC0F52144C44B00BAC9E2 /* MajorForum */ = {
 			isa = PBXGroup;
 			children = (
+				68A7A7A6214F54AC00808CFB /* Analysis */,
 				6897BE3121477A9700CCF7F6 /* IMGTool */,
 				6897BE1A2147425F00CCF7F6 /* RefreshControl */,
 				F7CEC1802146B54100BAC9E2 /* NetworkTool */,
@@ -335,6 +392,7 @@
 				F7CEC1292144C55300BAC9E2 /* AppDelegate.h */,
 				F7CEC1302144C55300BAC9E2 /* AppDelegate.m */,
 				F7CEC13A2144C60E00BAC9E2 /* PrefixHeader.pch */,
+				68A7A7A4214F537600808CFB /* AliyunEmasServices-Info.plist */,
 				F7CEC0FC2144C44B00BAC9E2 /* Main.storyboard */,
 				F7CEC1012144C44C00BAC9E2 /* LaunchScreen.storyboard */,
 				F7CEC1042144C44C00BAC9E2 /* Info.plist */,
@@ -400,6 +458,7 @@
 		F7CEC16A2145465600BAC9E2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				68A7A7B9214F89E200808CFB /* 个人信息 */,
 				F7CEC1762146B0D700BAC9E2 /* 综合资讯 */,
 			);
 			path = Controllers;
@@ -408,6 +467,7 @@
 		F7CEC1712146933700BAC9E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				68A7A7BD214F952A00808CFB /* close@3x.png */,
 				6897BE3C2147A88100CCF7F6 /* userDefault.png */,
 				6897BE3B2147A88100CCF7F6 /* userDefault@2x.png */,
 				6897BE3D2147A88100CCF7F6 /* userDefault@3x.png */,
@@ -448,7 +508,6 @@
 				F7CEC0EF2144C44B00BAC9E2 /* Sources */,
 				F7CEC0F02144C44B00BAC9E2 /* Frameworks */,
 				F7CEC0F12144C44B00BAC9E2 /* Resources */,
-				0C6C8E8F9EF0A5F6F071A23D /* [CP] Embed Pods Frameworks */,
 				700C4B3F67444379F4DD157D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -468,8 +527,6 @@
 				F7CEC1072144C44D00BAC9E2 /* Sources */,
 				F7CEC1082144C44D00BAC9E2 /* Frameworks */,
 				F7CEC1092144C44D00BAC9E2 /* Resources */,
-				0B95B10BAD6FF403491D1ECF /* [CP] Embed Pods Frameworks */,
-				E1A9C2BCACE713E898973592 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -489,8 +546,6 @@
 				F7CEC1122144C44D00BAC9E2 /* Sources */,
 				F7CEC1132144C44D00BAC9E2 /* Frameworks */,
 				F7CEC1142144C44D00BAC9E2 /* Resources */,
-				A70997F619700CC467C662EC /* [CP] Embed Pods Frameworks */,
-				64CA576BD2F6F18406136B3E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -550,12 +605,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A7A7BE214F952B00808CFB /* close@3x.png in Resources */,
 				6897BE3F2147A88100CCF7F6 /* userDefault.png in Resources */,
 				6897BE3E2147A88100CCF7F6 /* userDefault@2x.png in Resources */,
 				6897BE402147A88200CCF7F6 /* userDefault@3x.png in Resources */,
 				F7CEC1032144C44C00BAC9E2 /* LaunchScreen.storyboard in Resources */,
+				68A7A7B8214F631200808CFB /* PageNameRelation.plist in Resources */,
 				F7CEC1312144C55300BAC9E2 /* Assets.xcassets in Resources */,
 				F7CEC0FE2144C44B00BAC9E2 /* Main.storyboard in Resources */,
+				68A7A7A5214F537600808CFB /* AliyunEmasServices-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,36 +634,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B95B10BAD6FF403491D1ECF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MajorForumTests/Pods-MajorForumTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0C6C8E8F9EF0A5F6F071A23D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MajorForum/Pods-MajorForum-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4E3F1C226C4135CA16142CE0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -624,21 +652,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		64CA576BD2F6F18406136B3E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MajorForumUITests/Pods-MajorForumUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		700C4B3F67444379F4DD157D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -650,26 +663,11 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MajorForum/Pods-MajorForum-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A70997F619700CC467C662EC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MajorForumUITests/Pods-MajorForumUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B89F860AD308CF69617A93AB /* [CP] Check Pods Manifest.lock */ = {
@@ -688,21 +686,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E1A9C2BCACE713E898973592 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MajorForumTests/Pods-MajorForumTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E1E9CDA3296A317D2350FB2E /* [CP] Check Pods Manifest.lock */ = {
@@ -735,6 +718,7 @@
 				6897BE1F2147435A00CCF7F6 /* JSRefreshAutoFooter.m in Sources */,
 				F7CEC1892146B7CC00BAC9E2 /* JSNetworkTool+JSComprehensiveInformation.m in Sources */,
 				68F29FF62146752400F24AAF /* JSMasterButton.m in Sources */,
+				68A7A7A9214F54CF00808CFB /* UIViewController+JSAnalysis.m in Sources */,
 				6897BE2C2147719E00CCF7F6 /* JSFormTopicCell.m in Sources */,
 				68F29FF3214674DF00F24AAF /* JSMasterItem.m in Sources */,
 				F7CEC1352144C55300BAC9E2 /* AppDelegate.m in Sources */,
@@ -743,6 +727,7 @@
 				6897BE3A214796B000CCF7F6 /* JSFormTopicStatusButton.m in Sources */,
 				F7CEC17F2146B28700BAC9E2 /* JSBaseViewController.m in Sources */,
 				F7CEC1832146B56500BAC9E2 /* JSNetworkTool.m in Sources */,
+				68A7A7B6214F61BD00808CFB /* JSALBBTrackerTool.m in Sources */,
 				F7CEC15C214538B300BAC9E2 /* JSMasterViewController.m in Sources */,
 				F7CEC1862146B6AA00BAC9E2 /* JSNetworkTool+JSOAuth.m in Sources */,
 				6897BE302147798100CCF7F6 /* JSFormTopicContentView.m in Sources */,
@@ -752,6 +737,7 @@
 				6897BE3421477ACB00CCF7F6 /* UIImageView+JS_IV.m in Sources */,
 				F7CEC1702145492100BAC9E2 /* JSPhoneTabBarController.m in Sources */,
 				68F29FF02146738B00F24AAF /* JSBaseModel.m in Sources */,
+				68A7A7BC214F8A1C00808CFB /* JSPersonalInformationVC.m in Sources */,
 				F7CEC15E214538B300BAC9E2 /* JSSplitController.m in Sources */,
 				F7CEC15D214538B300BAC9E2 /* JSDetailViewController.m in Sources */,
 				F7CEC1342144C55300BAC9E2 /* main.m in Sources */,

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>clsName</key>
+	<array>
+		<dict>
+			<key>JSMasterViewController</key>
+			<string>iPad主界面</string>
+			<key>JSDetailViewController</key>
+			<string>iPad详情界面</string>
+			<key>JSPhoneTabBarController</key>
+			<string>iPhone标签控制器</string>
+			<key>JSComprehensiveInformationVC_iPad</key>
+			<string>iPad综合咨询界面</string>
+			<key>JSPersonalInformationVC</key>
+			<string>个人信息详情界面</string>
+		</dict>
+	</array>
+	<key>targetName</key>
+	<array>
+		<string>iPad详情界面</string>
+	</array>
+</dict>
+</plist>

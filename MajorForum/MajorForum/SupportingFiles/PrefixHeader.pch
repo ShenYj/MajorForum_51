@@ -29,6 +29,10 @@
  头文件
  */
 #pragma mark - 头文件
+/** 阿里 */
+#import <AlicloudMobileAnalitics/ALBBMAN.h>
+#import "JSALBBTrackerTool.h"
+#import "UIViewController+JSAnalysis.h"
 /** 约束 */
 #import "Masonry.h"
 /** 模型处理 */
@@ -39,8 +43,10 @@
 #import "UIImageView+JS_IV.h"
 /** 网络处理 */
 #import "JSNetworkTool.h"
+
 #import "JSSplitController.h"
 #import "JSBaseViewController.h"
+#import "JSBaseNavigationController.h"
 #import <JSUIkitExtension.h>
 #import "JSPhoneTabBarController.h"
 
