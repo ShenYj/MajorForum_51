@@ -154,9 +154,9 @@ static CGFloat const kNavigationBarHeight = 44.f;
                                                                             constant: self.js_NavigationBar.frame.size.height];
     [self.view addConstraint:navigationBarHeight];
     // contentView
-    CGFloat contentViewLeftConstraint = IS_IPHONE_X ? kiPhoneXViewMargin_L : 0;
-    CGFloat contentViewRightConstraint = IS_IPHONE_X ? kiPhoneXViewMargin_R : 0;
-    CGFloat contentViewBottomConstraint = IS_IPHONE_X ? kiPhoneXViewMargin_B : 0;
+    CGFloat contentViewLeftConstraint = IS_IPHONE_PROFILED_FULL_SCREEN ? kiPhoneXViewMargin_L : 0;
+    CGFloat contentViewRightConstraint = IS_IPHONE_PROFILED_FULL_SCREEN ? kiPhoneXViewMargin_R : 0;
+    CGFloat contentViewBottomConstraint = IS_IPHONE_PROFILED_FULL_SCREEN ? kiPhoneXViewMargin_B : 0;
 
     NSLayoutConstraint *contentViewTop = [NSLayoutConstraint constraintWithItem: self.js_contentView
                                                                       attribute: NSLayoutAttributeTop

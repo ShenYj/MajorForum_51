@@ -911,7 +911,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4AT6MHXZPN;
 				GCC_PREFIX_HEADER = "$SRCROOT/$(PRODUCT_NAME)/SupportingFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = MajorForum/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -931,7 +931,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4AT6MHXZPN;
 				GCC_PREFIX_HEADER = "$SRCROOT/$(PRODUCT_NAME)/SupportingFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = MajorForum/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
