@@ -41,7 +41,7 @@
         if (sourceClsName) [[JSALBBTrackerTool sharedBuilder].pageHitBuilder setReferPage:sourceClsName];
     }
     if (IS_IPAD) {
-        NSLog(@"%zd", self.splitViewController.childViewControllers.count);
+        //NSLog(@"%zd", self.splitViewController.childViewControllers.count);
         NSInteger idx = self.navigationController.childViewControllers.count - 2;
         if (idx < 0) return;
         Class sourceCls = [self.navigationController.childViewControllers[idx] class];
