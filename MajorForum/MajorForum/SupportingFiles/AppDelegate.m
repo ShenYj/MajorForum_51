@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-
+FOUNDATION_EXTERN CFAbsoluteTime startTime;
 @interface AppDelegate ()
 
 @end
@@ -25,6 +25,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSLog(@"启动时间: %f", CFAbsoluteTimeGetCurrent() - startTime);
     // 阿里SDK注册
     [[ALBBMANAnalytics getInstance] autoInit];
     
